@@ -12,7 +12,7 @@
     "bcrypt": "^6.0.0",
     "bcryptjs": "^3.0.2",
     "cors": "^2.8.5",
-    "express": "^4.18.2",
+    "express": "^4.22.1",
     "jsonwebtoken": "^9.0.2",
     "luxon": "^3.7.2",
     "mssql": "^11.0.1",
@@ -21,5 +21,16 @@
   },
   "devDependencies": {
     "nodemon": "^3.1.11"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoseAGalviz/Api-auditoria.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JoseAGalviz/Api-auditoria/issues"
+  },
+  "homepage": "https://github.com/JoseAGalviz/Api-auditoria#readme"
 }

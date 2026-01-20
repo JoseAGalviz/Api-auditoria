@@ -424,6 +424,8 @@ export const getBitrixCompanies = async (req, res) => {
  */
 export const getAllBitrixCompanies = async (req, res) => {
     try {
+        const { segmentos } = req.body || {};
+
         const BITRIX_BATCH_URL = "https://b24-sjdauj.bitrix24.es/rest/5149/qly93wxo8xvetemt/batch.json";
         const BITRIX_FIELDS_URL = "https://b24-sjdauj.bitrix24.es/rest/5149/qly93wxo8xvetemt/crm.company.fields.json";
         const BITRIX_LIST_URL = "https://b24-sjdauj.bitrix24.es/rest/5149/qly93wxo8xvetemt/crm.company.list.json";
@@ -631,6 +633,12 @@ export const getAllBitrixCompanies = async (req, res) => {
                     // Crear tabla temporal de clientes para este batch
                     const values = batch.map(code => `('${code}')`).join(',');
 
+                    let segmentCondition = "";
+                    if (segmentos && Array.isArray(segmentos) && segmentos.length > 0) {
+                        const segValues = segmentos.map(s => `'${String(s).trim().replace(/'/g, "''")}'`).join(',');
+                        segmentCondition = `WHERE c.co_seg IN (${segValues})`;
+                    }
+
                     const query = `
                         SET NOCOUNT ON;
 
@@ -721,7 +729,8 @@ export const getAllBitrixCompanies = async (req, res) => {
                         LEFT JOIN #ResumenFacturas rf ON c.co_cli = rf.co_cli
                         LEFT JOIN #ResumenSKU sku ON c.co_cli = sku.co_cli
                         LEFT JOIN #Morosidad m ON c.co_cli = m.co_cli
-                        LEFT JOIN #UltimoCobro cob ON c.co_cli = cob.co_cli;
+                        LEFT JOIN #UltimoCobro cob ON c.co_cli = cob.co_cli
+                        ${segmentCondition};
 
                         -- Limpieza
                         DROP TABLE #BatchClientes;
@@ -935,11 +944,17 @@ export const getAllBitrixCompanies = async (req, res) => {
         const totalTime = (Date.now() - startTime) / 1000;
         console.log(`🏁 Proceso finalizado en ${totalTime} s`);
 
+        // 8. Filtrar por segmento si se solicitó (Eliminar los que no trajeron data de Profit)
+        let responseData = finalData;
+        if (segmentos && Array.isArray(segmentos) && segmentos.length > 0) {
+            responseData = finalData.filter(item => item.profit !== null);
+        }
+
         res.json({
             success: true,
-            total: finalData.length,
+            total: responseData.length,
             time_seconds: totalTime,
-            data: finalData
+            data: responseData
         });
 
     } catch (error) {

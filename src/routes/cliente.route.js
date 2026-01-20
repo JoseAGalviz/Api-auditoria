@@ -6,6 +6,6 @@ const router = Router();
 // IMPORTANTE: Ahora /companies trae TODOS los registros optimizado
 // Si necesitas paginación, usa /companies/paginated
 router.get("/companies/paginated", getBitrixCompanies);
-router.get("/companies", getAllBitrixCompanies);
+router.post("/companies", getAllBitrixCompanies);
 
 export default router;
