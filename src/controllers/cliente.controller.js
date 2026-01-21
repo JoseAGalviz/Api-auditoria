@@ -818,6 +818,8 @@ export const getAllBitrixCompanies = async (req, res) => {
                             cobranza_tipoGestion,
                             cobranza_descripcion,
                             fecha_registro,
+                            ubicacion_lat,
+                            ubicacion_lng,
                             CASE DAYOFWEEK(CONVERT_TZ(fecha_registro, '+00:00', '-04:00'))
                                 WHEN 1 THEN 'Domingo'
                                 WHEN 2 THEN 'Lunes'
@@ -846,7 +848,8 @@ export const getAllBitrixCompanies = async (req, res) => {
                             cobranza_tipoGestion: row.cobranza_tipoGestion,
                             cobranza_descripcion: row.cobranza_descripcion,
                             fecha_registro: row.fecha_registro,
-                            dia_semana: row.dia_semana
+                            dia_semana: row.dia_semana,
+                            ubicacion: row.ubicacion_lat && row.ubicacion_lng ? `${row.ubicacion_lat}, ${row.ubicacion_lng}` : null
                         });
                     });
                 }
@@ -930,7 +933,8 @@ export const getAllBitrixCompanies = async (req, res) => {
                 fecha_registro: gestion.fecha_registro
                     ? new Date(gestion.fecha_registro).toISOString().replace('T', ' ').substring(0, 19)
                     : null,
-                dia_semana: gestion.dia_semana || null
+                dia_semana: gestion.dia_semana || null,
+                ubicacion: gestion.ubicacion || null
             })) : [];
 
             return {
