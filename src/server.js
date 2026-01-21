@@ -6,6 +6,7 @@ import clienteRoutes from "./routes/cliente.route.js";
 import profitBitrixRoutes from "./routes/profitBitrix.route.js";
 import auditoriaRoutes from "./routes/auditoria.route.js";
 import gestionRoutes from "./routes/gestion.route.js";
+import matrixRoutes from "./routes/matrix.route.js";
 
 const app = express();
 const PORT = process.env.PORT || 8001;
@@ -30,6 +31,7 @@ app.use("/api/clientes", clienteRoutes);
 app.use("/api/profit-bitrix", profitBitrixRoutes);
 app.use("/api/auditoria", auditoriaRoutes);
 app.use("/api/gestiones", gestionRoutes);
+app.use("/api/matrix", matrixRoutes);
 
 // Start server
 app.listen(PORT, () => {
