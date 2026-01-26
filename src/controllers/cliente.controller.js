@@ -176,7 +176,7 @@ export const getBitrixCompanies = async (req, res) => {
                 typeof row.plan_semana === "string"
                   ? JSON.parse(row.plan_semana)
                   : row.plan_semana || {};
-            } catch (e) {}
+            } catch (e) { }
             auditoriaMap[row.codigo_profit.trim()] = {
               bitacora: row.bitacora,
               obs_ejecutiva: row.obs_ejecutiva,
@@ -238,15 +238,15 @@ export const getBitrixCompanies = async (req, res) => {
 
       const gestionInfo = appData
         ? appData.map((g) => ({
-            ...g,
-            tipos: g.tipos ? JSON.parse(g.tipos) : [],
-            fecha_registro: g.fecha_registro
-              ? new Date(g.fecha_registro)
-                  .toISOString()
-                  .replace("T", " ")
-                  .substring(0, 19)
-              : null,
-          }))
+          ...g,
+          tipos: g.tipos ? JSON.parse(g.tipos) : [],
+          fecha_registro: g.fecha_registro
+            ? new Date(g.fecha_registro)
+              .toISOString()
+              .replace("T", " ")
+              .substring(0, 19)
+            : null,
+        }))
         : [];
 
       return {
@@ -429,11 +429,13 @@ export const getAllBitrixCompanies = async (req, res) => {
           const reqPool = localPool.request();
           const values = batch.map((c) => `('${c}')`).join(",");
           let segmentCondition = "";
+          let joinSegmento = "";
           if (segmentos && Array.isArray(segmentos) && segmentos.length > 0) {
-            const segValues = segmentos
-              .map((s) => `'${String(s).trim().replace(/'/g, "''")}'`)
-              .join(",");
-            segmentCondition = `WHERE c.co_seg IN (${segValues})`;
+            joinSegmento = "INNER JOIN segmento s WITH (NOLOCK) ON c.co_seg = s.co_seg";
+            const likeConditions = segmentos
+              .map((s) => `s.seg_des LIKE '%${String(s).trim().replace(/'/g, "''")}%'`)
+              .join(" OR ");
+            segmentCondition = `WHERE (${likeConditions})`;
           }
           const query = `
                         SET NOCOUNT ON;
@@ -461,7 +463,14 @@ export const getAllBitrixCompanies = async (req, res) => {
                         SELECT co_cli, cob_num, fec_cob INTO #UltimoCobro FROM (SELECT c.co_cli, c.cob_num, c.fec_cob, ROW_NUMBER() OVER(PARTITION BY c.co_cli ORDER BY c.fec_cob DESC) as rn FROM cobros c WITH (NOLOCK) INNER JOIN #BatchClientes bc ON c.co_cli = bc.co_cli COLLATE DATABASE_DEFAULT WHERE c.anulado = 0) t WHERE rn = 1;
 
                         SELECT c.co_cli, c.login, c.horar_caja, ISNULL(rf.total_trancito, 0) as total_trancito, ISNULL(rf.total_vencido, 0) as total_vencido, rf.fecha_ultima_compra, ISNULL(rf.ventas_mes_actual, 0) as ventas_mes_actual, ISNULL(rf.ventas_mes_pasado, 0) as ventas_mes_pasado, ISNULL(sku.sku_mes, 0) as sku_mes, m.nro_doc as morosidad_doc, cob.cob_num as ultimo_cobro_num, cob.fec_cob as ultimo_cobro_fecha
-                        FROM clientes c WITH (NOLOCK) INNER JOIN #BatchClientes bc ON c.co_cli = bc.co_cli COLLATE DATABASE_DEFAULT LEFT JOIN #ResumenFacturas rf ON c.co_cli = rf.co_cli LEFT JOIN #ResumenSKU sku ON c.co_cli = sku.co_cli LEFT JOIN #Morosidad m ON c.co_cli = m.co_cli LEFT JOIN #UltimoCobro cob ON c.co_cli = cob.co_cli ${segmentCondition};
+                        FROM clientes c WITH (NOLOCK) 
+                        INNER JOIN #BatchClientes bc ON c.co_cli = bc.co_cli COLLATE DATABASE_DEFAULT 
+                        ${joinSegmento}
+                        LEFT JOIN #ResumenFacturas rf ON c.co_cli = rf.co_cli 
+                        LEFT JOIN #ResumenSKU sku ON c.co_cli = sku.co_cli 
+                        LEFT JOIN #Morosidad m ON c.co_cli = m.co_cli 
+                        LEFT JOIN #UltimoCobro cob ON c.co_cli = cob.co_cli 
+                        ${segmentCondition};
 
                         DROP TABLE #BatchClientes; DROP TABLE #ResumenFacturas; DROP TABLE #ResumenSKU; DROP TABLE #Morosidad; DROP TABLE #UltimoCobro;
                     `;
@@ -566,7 +575,7 @@ export const getAllBitrixCompanies = async (req, res) => {
                   typeof r.plan_semana === "string"
                     ? JSON.parse(r.plan_semana)
                     : r.plan_semana || {};
-              } catch (e) {}
+              } catch (e) { }
               innerAuditoriaMap[r.codigo_profit.trim()] = {
                 bitacora: r.bitacora,
                 obs_ejecutiva: r.obs_ejecutiva,
@@ -607,17 +616,17 @@ export const getAllBitrixCompanies = async (req, res) => {
 
       const gestionInfo = appData
         ? appData.map((g) => ({
-            ...g,
-            tipos: g.tipos ? JSON.parse(g.tipos) : [],
-            fecha_registro: g.fecha_registro
-              ? new Date(g.fecha_registro)
-                  .toISOString()
-                  .replace("T", " ")
-                  .substring(0, 19)
-              : null,
-            // Aseguramos que la ubicacion se pase en el objeto
-            ubicacion: g.ubicacion || null,
-          }))
+          ...g,
+          tipos: g.tipos ? JSON.parse(g.tipos) : [],
+          fecha_registro: g.fecha_registro
+            ? new Date(g.fecha_registro)
+              .toISOString()
+              .replace("T", " ")
+              .substring(0, 19)
+            : null,
+          // Aseguramos que la ubicacion se pase en el objeto
+          ubicacion: g.ubicacion || null,
+        }))
         : [];
 
       return {

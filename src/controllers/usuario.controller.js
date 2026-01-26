@@ -58,10 +58,13 @@ export const login = async (req, res) => {
         );
 
         // Parsear segmentos y permisos para la respuesta
+        const segments = typeof user.segmentos === 'string' ? JSON.parse(user.segmentos) : user.segmentos;
+
         const userData = {
             id: user.id,
             usuario: user.usuario,
-            segmentos: typeof user.segmentos === 'string' ? JSON.parse(user.segmentos) : user.segmentos,
+            segmentos: segments,
+            segmento: Array.isArray(segments) && segments.length > 0 ? segments[0] : (segments || null),
             permisos: typeof user.permisos === 'string' ? JSON.parse(user.permisos) : user.permisos,
             fecha_registro: user.fecha_registro
         };

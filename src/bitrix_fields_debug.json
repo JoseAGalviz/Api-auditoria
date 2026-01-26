@@ -1,0 +1,3752 @@
+{
+  "UF_CRM_1635894560": {
+    "title": "UF_CRM_1635894560",
+    "formLabel": "Estado",
+    "items": [
+      {
+        "ID": "55",
+        "VALUE": "Tachira"
+      },
+      {
+        "ID": "57",
+        "VALUE": "Anzoategui"
+      },
+      {
+        "ID": "59",
+        "VALUE": "Apure"
+      },
+      {
+        "ID": "61",
+        "VALUE": "Aragua"
+      },
+      {
+        "ID": "63",
+        "VALUE": "Barinas"
+      },
+      {
+        "ID": "65",
+        "VALUE": "Bolivar"
+      },
+      {
+        "ID": "67",
+        "VALUE": "Carabobo"
+      },
+      {
+        "ID": "69",
+        "VALUE": "Cojedes"
+      },
+      {
+        "ID": "71",
+        "VALUE": "Delta Amacuro"
+      },
+      {
+        "ID": "73",
+        "VALUE": "Caracas"
+      },
+      {
+        "ID": "75",
+        "VALUE": "Falcon"
+      },
+      {
+        "ID": "77",
+        "VALUE": "Guarico"
+      },
+      {
+        "ID": "79",
+        "VALUE": "Lara"
+      },
+      {
+        "ID": "81",
+        "VALUE": "Merida"
+      },
+      {
+        "ID": "83",
+        "VALUE": "Monagas"
+      },
+      {
+        "ID": "85",
+        "VALUE": "Nueva Esparta"
+      },
+      {
+        "ID": "87",
+        "VALUE": "Portuguesa"
+      },
+      {
+        "ID": "89",
+        "VALUE": "Sucre"
+      },
+      {
+        "ID": "91",
+        "VALUE": "La Guaria"
+      },
+      {
+        "ID": "93",
+        "VALUE": "Yaracuy"
+      },
+      {
+        "ID": "95",
+        "VALUE": "Zulia"
+      },
+      {
+        "ID": "779",
+        "VALUE": "Miranda"
+      },
+      {
+        "ID": "861",
+        "VALUE": "Trujillo"
+      },
+      {
+        "ID": "1627",
+        "VALUE": "Internacional"
+      },
+      {
+        "ID": "1789",
+        "VALUE": "Amazonas"
+      },
+      {
+        "ID": "4063",
+        "VALUE": "Por definir"
+      },
+      {
+        "ID": "4361",
+        "VALUE": "Barquisimeto"
+      }
+    ]
+  },
+  "UF_CRM_1635903069": {
+    "title": "UF_CRM_1635903069",
+    "formLabel": "Ciudad (Zona Profit)",
+    "items": [
+      {
+        "ID": "923",
+        "VALUE": "Sin Definir"
+      },
+      {
+        "ID": "211",
+        "VALUE": "Tachira-Abejales"
+      },
+      {
+        "ID": "117",
+        "VALUE": "Tachira-San Cristobal"
+      },
+      {
+        "ID": "119",
+        "VALUE": "Tachira-Naranajales"
+      },
+      {
+        "ID": "175",
+        "VALUE": "Tachira-San Josecito"
+      },
+      {
+        "ID": "141",
+        "VALUE": "Tachira-Tariba"
+      },
+      {
+        "ID": "167",
+        "VALUE": "Tachira-Piñal"
+      },
+      {
+        "ID": "181",
+        "VALUE": "Tachira-Palotal (antes de ureña)"
+      },
+      {
+        "ID": "177",
+        "VALUE": "Tachira-Capacho"
+      },
+      {
+        "ID": "189",
+        "VALUE": "Tachira-EL valle (Via rubio)"
+      },
+      {
+        "ID": "739",
+        "VALUE": "Tachira-La Victoria (Via Rubio)"
+      },
+      {
+        "ID": "195",
+        "VALUE": "Tachira-Vega De Aza"
+      },
+      {
+        "ID": "741",
+        "VALUE": "Tachira-El Poblado Rubio"
+      },
+      {
+        "ID": "743",
+        "VALUE": "Tachira-Capacho Viejo"
+      },
+      {
+        "ID": "815",
+        "VALUE": "Tachira-Las Mesas"
+      },
+      {
+        "ID": "1753",
+        "VALUE": "Tachira - La Laguna"
+      },
+      {
+        "ID": "817",
+        "VALUE": "Tachira-Pregonero"
+      },
+      {
+        "ID": "819",
+        "VALUE": "Tachira-Borota"
+      },
+      {
+        "ID": "821",
+        "VALUE": "Tachira-Palo Grande"
+      },
+      {
+        "ID": "1537",
+        "VALUE": "Tachira-San Jose de Bolivar"
+      },
+      {
+        "ID": "825",
+        "VALUE": "Tachira-Lobatera"
+      },
+      {
+        "ID": "1745",
+        "VALUE": "Tachira - Ceiba (Nula)"
+      },
+      {
+        "ID": "823",
+        "VALUE": "Tachira-Palo gordo"
+      },
+      {
+        "ID": "827",
+        "VALUE": "Tachira-Tucape"
+      },
+      {
+        "ID": "1751",
+        "VALUE": "Tachira - Umuquena"
+      },
+      {
+        "ID": "1441",
+        "VALUE": "Tachira - Peribeca"
+      },
+      {
+        "ID": "877",
+        "VALUE": "Tachira-Pedraza"
+      },
+      {
+        "ID": "951",
+        "VALUE": "Tachira-El Milagro"
+      },
+      {
+        "ID": "1241",
+        "VALUE": "Tachira- Milagro"
+      },
+      {
+        "ID": "1755",
+        "VALUE": "Tachira - San Simos (Via Merida)"
+      },
+      {
+        "ID": "1749",
+        "VALUE": "Tachira - San Lorenzo"
+      },
+      {
+        "ID": "913",
+        "VALUE": "Tachira-Pedrera"
+      },
+      {
+        "ID": "949",
+        "VALUE": "Tachira-Chururu"
+      },
+      {
+        "ID": "1507",
+        "VALUE": "Tachira-Copa de Oro"
+      },
+      {
+        "ID": "1747",
+        "VALUE": "Tachira - La Morita (Naranjales)"
+      },
+      {
+        "ID": "3111",
+        "VALUE": "S/C (TACHIRA) - SAN CRISTOBAL - (DR FRANCISCO ROMERO LOBO)"
+      },
+      {
+        "ID": "3093",
+        "VALUE": "S/C (TACHIRA) - CARDENAS - (CARDENAS)"
+      },
+      {
+        "ID": "1097",
+        "VALUE": "Merida-Hernandez Merida"
+      },
+      {
+        "ID": "1093",
+        "VALUE": "Merida-Caño Amarillo"
+      },
+      {
+        "ID": "1099",
+        "VALUE": "Merida-San Simon"
+      },
+      {
+        "ID": "1105",
+        "VALUE": "Merida-La Blanca"
+      },
+      {
+        "ID": "147",
+        "VALUE": "Merida QUE REVISAR Y SELECCIONAR"
+      },
+      {
+        "ID": "1107",
+        "VALUE": "Merida-Caño Seco"
+      },
+      {
+        "ID": "1095",
+        "VALUE": "Merida-Tendida"
+      },
+      {
+        "ID": "1101",
+        "VALUE": "Merida-Pueblo Hondo"
+      },
+      {
+        "ID": "1103",
+        "VALUE": "Merida-El Vigia"
+      },
+      {
+        "ID": "1091",
+        "VALUE": "Merida-La Palmita"
+      },
+      {
+        "ID": "1115",
+        "VALUE": "Merida-La Azulita"
+      },
+      {
+        "ID": "1113",
+        "VALUE": "Merida-Caño Zancudo"
+      },
+      {
+        "ID": "1111",
+        "VALUE": "Merida-Guayabones"
+      },
+      {
+        "ID": "1125",
+        "VALUE": "Merida-Arapuey"
+      },
+      {
+        "ID": "1119",
+        "VALUE": "Merida-Tucani"
+      },
+      {
+        "ID": "1117",
+        "VALUE": "Merida-El Pinar"
+      },
+      {
+        "ID": "1131",
+        "VALUE": "Merida-Santa Cruz de Mora"
+      },
+      {
+        "ID": "1109",
+        "VALUE": "Merida-Mucujepe"
+      },
+      {
+        "ID": "1121",
+        "VALUE": "Merida-Nueva Bolivia"
+      },
+      {
+        "ID": "1127",
+        "VALUE": "Merida-Torondoy"
+      },
+      {
+        "ID": "1135",
+        "VALUE": "Merida-El Peñon"
+      },
+      {
+        "ID": "1141",
+        "VALUE": "Merida-Zea"
+      },
+      {
+        "ID": "1123",
+        "VALUE": "Merida-Caja Seca"
+      },
+      {
+        "ID": "1143",
+        "VALUE": "Merida-Guaraque"
+      },
+      {
+        "ID": "1133",
+        "VALUE": "Merida-Puerto Rico"
+      },
+      {
+        "ID": "1129",
+        "VALUE": "Merida-Mesa de Bolivar"
+      },
+      {
+        "ID": "1137",
+        "VALUE": "Merida Montaña (Merida) - Tovar (Tovar)"
+      },
+      {
+        "ID": "1145",
+        "VALUE": "Merida-El Molino"
+      },
+      {
+        "ID": "1149",
+        "VALUE": "Merida-Estanques"
+      },
+      {
+        "ID": "1139",
+        "VALUE": "Merida-La Playa"
+      },
+      {
+        "ID": "1213",
+        "VALUE": "merida montaña-(MERIDA) sucre (lagunillas)"
+      },
+      {
+        "ID": "1307",
+        "VALUE": "Merida-Pedegral"
+      },
+      {
+        "ID": "1645",
+        "VALUE": "Merida-La Toma"
+      },
+      {
+        "ID": "1147",
+        "VALUE": "Merida-Canagua"
+      },
+      {
+        "ID": "1731",
+        "VALUE": "Merida - Santa Elena De Arenales"
+      },
+      {
+        "ID": "1239",
+        "VALUE": "Merida - Merida"
+      },
+      {
+        "ID": "1151",
+        "VALUE": "Merida-Chiguara"
+      },
+      {
+        "ID": "1735",
+        "VALUE": "Merida - Julio Cesar salas"
+      },
+      {
+        "ID": "1855",
+        "VALUE": "Merida Montaña (Merida) - Libertador (Sagrario)"
+      },
+      {
+        "ID": "1887",
+        "VALUE": "Merida Montaña (Merida) - Libertador (El LLano)"
+      },
+      {
+        "ID": "1897",
+        "VALUE": "Merida Montaña (Merida) - Libertador (Milla)"
+      },
+      {
+        "ID": "1901",
+        "VALUE": "Merida Montaña (Merida) - Miranda (Andres Eloy Blanco)"
+      },
+      {
+        "ID": "1727",
+        "VALUE": "Merida - Campo Claro"
+      },
+      {
+        "ID": "1729",
+        "VALUE": "Merida - El Arenal"
+      },
+      {
+        "ID": "1155",
+        "VALUE": "Merida-Ejido"
+      },
+      {
+        "ID": "1153",
+        "VALUE": "Merida-San Juan de Lagunillas"
+      },
+      {
+        "ID": "1281",
+        "VALUE": "Merida-Timotes"
+      },
+      {
+        "ID": "1259",
+        "VALUE": "Merida-Tabay"
+      },
+      {
+        "ID": "1283",
+        "VALUE": "Merida-Santo Domingo"
+      },
+      {
+        "ID": "1733",
+        "VALUE": "Merida - Chiguara"
+      },
+      {
+        "ID": "1481",
+        "VALUE": "Merida Plano (Zulia) - Colon (Santa Barbara )"
+      },
+      {
+        "ID": "1865",
+        "VALUE": "Merida Plano (Merida) - Caracciolo Parra olmedo (tucani)"
+      },
+      {
+        "ID": "1737",
+        "VALUE": "Merida - Santa maria de caparo"
+      },
+      {
+        "ID": "1647",
+        "VALUE": "Merida-Buenaventura"
+      },
+      {
+        "ID": "1275",
+        "VALUE": "Merida-Mucuchies"
+      },
+      {
+        "ID": "1263",
+        "VALUE": "Merida-Tiendita"
+      },
+      {
+        "ID": "1261",
+        "VALUE": "Merida-La Vega"
+      },
+      {
+        "ID": "1875",
+        "VALUE": "Merida Plano (Merida) - tulio febres cordero (nueva bolivia)"
+      },
+      {
+        "ID": "1923",
+        "VALUE": "Merida Plano (Merida) - Tulio Febres Cordero (nueva bolivia)"
+      },
+      {
+        "ID": "1873",
+        "VALUE": "Merida plano-(MERIDA) - Julio Cesar Salas (Arapuey)"
+      },
+      {
+        "ID": "1867",
+        "VALUE": "Merida Plano(Merida)-Caracciolo Parra olmedo(florencio ramir"
+      },
+      {
+        "ID": "1931",
+        "VALUE": "Merida Plano (Tachira) - Samuel Dario Maldonado (Bocono)"
+      },
+      {
+        "ID": "1877",
+        "VALUE": "merida plano(MERIDA)-justo briceño (torondoy)"
+      },
+      {
+        "ID": "1937",
+        "VALUE": "Merida Plano (Zulia) - Colon (Santa Cruz Del Zulia)"
+      },
+      {
+        "ID": "1907",
+        "VALUE": "Merida Plano(Merida) Obispo Ramos de lora (eloy paredes)"
+      },
+      {
+        "ID": "1935",
+        "VALUE": "Merida plano (Tachira) - Simon Rodriguez (San simon)"
+      },
+      {
+        "ID": "1939",
+        "VALUE": "Merida Plano (Zulia) - Machiques(bartolome de las casas)"
+      },
+      {
+        "ID": "1905",
+        "VALUE": "Merida Plano(Merida)obispo ramos de lora (sta elenea arenale"
+      },
+      {
+        "ID": "1895",
+        "VALUE": "Merida Montaña (Merida) - Libertador (Mariano Picon Salas)"
+      },
+      {
+        "ID": "1889",
+        "VALUE": "Merida Montaña (Merida) - Libertador (Gonzalo Picon Febres)"
+      },
+      {
+        "ID": "1911",
+        "VALUE": "Merida Montaña (Merida) - Rangel (mucuchies)"
+      },
+      {
+        "ID": "1859",
+        "VALUE": "MERIDA MONTAÑA (MERIDA) - ALBERTO ADRIANI (GABRIEL PICON)"
+      },
+      {
+        "ID": "1893",
+        "VALUE": "Merida Montaña (Merida) - Libertador (Lasso de la vega)"
+      },
+      {
+        "ID": "1903",
+        "VALUE": "Merida Montaña (Merida) - Miranda (Timotes)"
+      },
+      {
+        "ID": "1871",
+        "VALUE": "Merida Montaña (Merida) - Guaraque (Guaraque)"
+      },
+      {
+        "ID": "1899",
+        "VALUE": "Merida Montaña (Merida) - Libertador (Osuna Rodriguez)"
+      },
+      {
+        "ID": "1917",
+        "VALUE": "Merida Montaña (Merida) - Rangel (san rafael)"
+      },
+      {
+        "ID": "1915",
+        "VALUE": "Merida Montaña (Merida) - Rivas Davila (Geronimo Maldonado)"
+      },
+      {
+        "ID": "1869",
+        "VALUE": "Merida Montaña (Merida) - Cardenal Quintero (Santo Domingo)"
+      },
+      {
+        "ID": "1925",
+        "VALUE": "Merida Montaña (Merida) - Zea (Zea)"
+      },
+      {
+        "ID": "1891",
+        "VALUE": "Merida Montaña (Merida) - Libertador (Juan Rodriguez Suarez)"
+      },
+      {
+        "ID": "1861",
+        "VALUE": "Merida Montaña (Merida) - Campo Elias (Matriz)"
+      },
+      {
+        "ID": "1885",
+        "VALUE": "Merida Montaña (Merida) - Libertador (Domingo Peña)"
+      },
+      {
+        "ID": "1967",
+        "VALUE": "Merida plano (Merida) - andres bello (la azulita)"
+      },
+      {
+        "ID": "1943",
+        "VALUE": "Merida Plano (Zulia) - Cabimas (Ambrosio)"
+      },
+      {
+        "ID": "1963",
+        "VALUE": "Merida Plano (Merida) -alberto adriani (pdt Romulo Gallegos)"
+      },
+      {
+        "ID": "1961",
+        "VALUE": "Merida Plano (Merida) - alberto adriani (pdt paez)"
+      },
+      {
+        "ID": "1953",
+        "VALUE": "Merida Plano (Zulia) - Francisco Javier Pulgar (Simon Rodrig"
+      },
+      {
+        "ID": "1957",
+        "VALUE": "Merida Plano (Zulia) - Francisco Javier pul..( Carlos queved"
+      },
+      {
+        "ID": "1945",
+        "VALUE": "Merida Plano (Zulia) - Catatumbo (Encontrados)"
+      },
+      {
+        "ID": "1941",
+        "VALUE": "Merida Plano (Zulia) - Almirante Padilla (Isla de Toas)"
+      },
+      {
+        "ID": "1929",
+        "VALUE": "Merida Plano (MERIDA)alberto adriani (gabriel picon)"
+      },
+      {
+        "ID": "4011",
+        "VALUE": "Merida plano (Zulia) Jesus maria semprun- jesus maria semprun"
+      },
+      {
+        "ID": "1933",
+        "VALUE": "Merida Plano (Tachira) - Samuel Dario Maldonado (Hernandez)"
+      },
+      {
+        "ID": "1949",
+        "VALUE": "Merida Plano (Zulia) - Colon (San Carlos del Zulia)"
+      },
+      {
+        "ID": "1955",
+        "VALUE": "Merida Plano (Zulia) - Sucre (Romulo Gallegos)"
+      },
+      {
+        "ID": "1947",
+        "VALUE": "Merida Plano (Zulia) - Colon (Moralito)"
+      },
+      {
+        "ID": "1965",
+        "VALUE": "Merida Plano (Merida) - alberto adriani (pdt pulido mendez)"
+      },
+      {
+        "ID": "1981",
+        "VALUE": "merida plano (TACHIRA) samuel dario maldonado (la tendida)"
+      },
+      {
+        "ID": "1959",
+        "VALUE": "Merida Plano (Merida) - alberto adriani (pdt betancourt)"
+      },
+      {
+        "ID": "3839",
+        "VALUE": "Merida Montaña (Merida) - Santa Cruz (Mesa Bolivar)"
+      },
+      {
+        "ID": "1969",
+        "VALUE": "Merida montaña(MERIDA)-antonio pinto salinas(sta cruz de mor"
+      },
+      {
+        "ID": "1879",
+        "VALUE": "Merida Montaña (Merida) - Libertador (Antonio Spinetti Dini)"
+      },
+      {
+        "ID": "1857",
+        "VALUE": "merida montaña (MERIDA) santos marquina (tabay)"
+      },
+      {
+        "ID": "1863",
+        "VALUE": "Merida Montaña (Merida) - Campo Elias (Montalban)"
+      },
+      {
+        "ID": "1927",
+        "VALUE": "Merida Montaña (Tachira) - Jauregui (la grita)"
+      },
+      {
+        "ID": "1883",
+        "VALUE": "Merida Montaña (Merida) - Libertador (Caracciolo Parra Paez)"
+      },
+      {
+        "ID": "1881",
+        "VALUE": "Merida Montaña (Merida) - Libertador (Arias)"
+      },
+      {
+        "ID": "1919",
+        "VALUE": "Merida Montaña (Merida) - Sucre (chiguara)"
+      },
+      {
+        "ID": "1971",
+        "VALUE": "Merida montaña(merida)-antonio pinto salinas(mesa bolivar)"
+      },
+      {
+        "ID": "1977",
+        "VALUE": "Merida Montaña (Merida) - Campo Elias ( Fernandez Peña)"
+      },
+      {
+        "ID": "1273",
+        "VALUE": "Merida Montaña (Merida) - Rivas Davila (Bailadores)"
+      },
+      {
+        "ID": "1909",
+        "VALUE": "Merida Montaña (Merida) - Pueblo LLano (Pueblo llano)"
+      },
+      {
+        "ID": "1973",
+        "VALUE": "Merida Montaña (Merida) - Arzobispo Chacon (Canagua)"
+      },
+      {
+        "ID": "1975",
+        "VALUE": "Merida Montaña (Merida) - Arzobispo Chacon (El Molino)"
+      },
+      {
+        "ID": "1643",
+        "VALUE": "Merida-Pueblo LLano"
+      },
+      {
+        "ID": "1501",
+        "VALUE": "Apure-EL Saman"
+      },
+      {
+        "ID": "1523",
+        "VALUE": "Apure-La Trinidad"
+      },
+      {
+        "ID": "937",
+        "VALUE": "Apure-Trinidad De Orichuna"
+      },
+      {
+        "ID": "933",
+        "VALUE": "Apure-Guacas"
+      },
+      {
+        "ID": "1683",
+        "VALUE": "Apure - La Estacada"
+      },
+      {
+        "ID": "1983",
+        "VALUE": "APURE CAPITAL (APURE)-ACHAGUAS (ACHAGUAS)"
+      },
+      {
+        "ID": "939",
+        "VALUE": "Apure-Mantecal"
+      },
+      {
+        "ID": "941",
+        "VALUE": "Apure-bruzual"
+      },
+      {
+        "ID": "1503",
+        "VALUE": "Apure - Apure"
+      },
+      {
+        "ID": "1015",
+        "VALUE": "Apure-Biruaca"
+      },
+      {
+        "ID": "1685",
+        "VALUE": "Apure - Los angeles de Bruzual"
+      },
+      {
+        "ID": "947",
+        "VALUE": "Apure-Canton"
+      },
+      {
+        "ID": "1465",
+        "VALUE": "Apure-Los algarrobos"
+      },
+      {
+        "ID": "1467",
+        "VALUE": "Apure-San Miguel de Cunaviche"
+      },
+      {
+        "ID": "1687",
+        "VALUE": "Apure - Nutrias"
+      },
+      {
+        "ID": "1985",
+        "VALUE": "APURE CAPITAL (APURE)-ACHAGUAS(QUESERAS DEL MEDIO)"
+      },
+      {
+        "ID": "1989",
+        "VALUE": "Apure Ruta (Apure) Paez - (El Amparo)"
+      },
+      {
+        "ID": "1999",
+        "VALUE": "Apure Ruta (Apure) - Muñoz (Mantecal)"
+      },
+      {
+        "ID": "3373",
+        "VALUE": "Apure Capital (Amazonas) - Atures (Luis Alberto Gomez)"
+      },
+      {
+        "ID": "3837",
+        "VALUE": "Merida Montaña (Merida) - Ejido - (Montalban)"
+      },
+      {
+        "ID": "945",
+        "VALUE": "Apure Ruta (Apure) - Paez (Guasdualito)"
+      },
+      {
+        "ID": "1679",
+        "VALUE": "Apure -  Apurito"
+      },
+      {
+        "ID": "2003",
+        "VALUE": "Apure Capital (APURE) - Biruaca (Biruaca)"
+      },
+      {
+        "ID": "935",
+        "VALUE": "Apure Ruta (Apure) - Romulo Gallegos (Elorza)"
+      },
+      {
+        "ID": "2007",
+        "VALUE": "Apure Capital (Apure) - Pedro Camejo (San Juan De Payara)"
+      },
+      {
+        "ID": "2001",
+        "VALUE": "Apure Ruta (Apure) - Muñoz (Rincon Hondo)"
+      },
+      {
+        "ID": "1485",
+        "VALUE": "Apure-El Amparo"
+      },
+      {
+        "ID": "2013",
+        "VALUE": "Apure Capital (Apure) - Pedro Camejo (Cunabiche)"
+      },
+      {
+        "ID": "1681",
+        "VALUE": "Apure - Arichuna"
+      },
+      {
+        "ID": "2009",
+        "VALUE": "Apure Ruta (Apure) - Achaguas (Mucuritas)"
+      },
+      {
+        "ID": "3375",
+        "VALUE": "Apure Capital (Amazonas) - Atures (Fernado Giron Tovar)"
+      },
+      {
+        "ID": "2015",
+        "VALUE": "Apure Ruta (Apure) - Romulo Gallegos ( Urdaneta)"
+      },
+      {
+        "ID": "2023",
+        "VALUE": "Apure Ruta (Apure) - MUÑOZ (Quintero)"
+      },
+      {
+        "ID": "2005",
+        "VALUE": "Apure Capital (Apure) -  San Fernando (El Recreo)"
+      },
+      {
+        "ID": "2011",
+        "VALUE": "Apure Capital (Apure) - San Fernando (Urdaneta)"
+      },
+      {
+        "ID": "1997",
+        "VALUE": "Apure Ruta (Apure) - Paez (Urdaneta)"
+      },
+      {
+        "ID": "1987",
+        "VALUE": "Apure capital (Guarico) - Francisco de miranda (calabozo)"
+      },
+      {
+        "ID": "2027",
+        "VALUE": "Apure Ruta (Barinas) -Alberto Torrealba(Rodriguez Dominguez)"
+      },
+      {
+        "ID": "2025",
+        "VALUE": "Apure Ruta (Barinas) - Andres Eloy Blanco (El Canton)"
+      },
+      {
+        "ID": "1991",
+        "VALUE": "Apure Capital (Guarico) - Camaguan (Camaguan)"
+      },
+      {
+        "ID": "989",
+        "VALUE": "APURE CAPITAL (APURE) - ACHAGUAS (EL YAGUAL)"
+      },
+      {
+        "ID": "2017",
+        "VALUE": "Apure Capital (Amazonas) - Atures (Fernando)"
+      },
+      {
+        "ID": "2021",
+        "VALUE": "Apure Capital (Guarico) - San Geronimo Guayabal (Cazorla)"
+      },
+      {
+        "ID": "1993",
+        "VALUE": "Apure Ruta (Apure) - Muñoz (Bruzual)"
+      },
+      {
+        "ID": "2029",
+        "VALUE": "Apure Ruta (Barinas)-Andres Eloy Blanco(Santa Cruz De guacas)"
+      },
+      {
+        "ID": "943",
+        "VALUE": "Apure Capital (Apure) - San Fernando (San Fernando)"
+      },
+      {
+        "ID": "2019",
+        "VALUE": "Apure Capital (Guarico) - Calabozo (Calabozo)"
+      },
+      {
+        "ID": "1995",
+        "VALUE": "Apure Ruta (Apure) - Paez (Aramendi)"
+      },
+      {
+        "ID": "3083",
+        "VALUE": "Apure Ruta (Barinas) - Sosas (Ciudad Nutrias)"
+      },
+      {
+        "ID": "2031",
+        "VALUE": "Apure Capital (Apure) - San Fernando (Peñalber)"
+      },
+      {
+        "ID": "4657",
+        "VALUE": "apure capital (bolivar) - caicara del orinoco"
+      },
+      {
+        "ID": "127",
+        "VALUE": "Caracas QUE REVISAR Y SELECCIONAR"
+      },
+      {
+        "ID": "1351",
+        "VALUE": "Caracas - Bello monte"
+      },
+      {
+        "ID": "1349",
+        "VALUE": "Caracas Catia"
+      },
+      {
+        "ID": "1355",
+        "VALUE": "Caracas - La Castellana"
+      },
+      {
+        "ID": "1353",
+        "VALUE": "Caracas , Altamira"
+      },
+      {
+        "ID": "1359",
+        "VALUE": "Caracas - av solano"
+      },
+      {
+        "ID": "1365",
+        "VALUE": "Caracas -Av. Libertador"
+      },
+      {
+        "ID": "1357",
+        "VALUE": "Caracas - chacao"
+      },
+      {
+        "ID": "1369",
+        "VALUE": "Caracas -sabana grande"
+      },
+      {
+        "ID": "1361",
+        "VALUE": "Caracas- Recreo"
+      },
+      {
+        "ID": "1363",
+        "VALUE": "Caracas-plaza Vzla"
+      },
+      {
+        "ID": "1371",
+        "VALUE": "Caracas - Petare"
+      },
+      {
+        "ID": "1367",
+        "VALUE": "Caracas - Av Maturin"
+      },
+      {
+        "ID": "1373",
+        "VALUE": "Caracas - Marquez"
+      },
+      {
+        "ID": "2033",
+        "VALUE": "Caracas (Caracas) - Libertador (El Recreo)"
+      },
+      {
+        "ID": "1379",
+        "VALUE": "Caracas - Calendaría"
+      },
+      {
+        "ID": "1377",
+        "VALUE": "Caracas - Andres Bello"
+      },
+      {
+        "ID": "1381",
+        "VALUE": "Caracas - San Bernandino"
+      },
+      {
+        "ID": "1375",
+        "VALUE": "Caracas - Cafetal"
+      },
+      {
+        "ID": "1385",
+        "VALUE": "Caracas - San Martin"
+      },
+      {
+        "ID": "1383",
+        "VALUE": "Caracas - Av Urdaneta"
+      },
+      {
+        "ID": "1423",
+        "VALUE": "Caracas- Montalban"
+      },
+      {
+        "ID": "1387",
+        "VALUE": "Caracas - Av Lecuna"
+      },
+      {
+        "ID": "1429",
+        "VALUE": "Caracas- Los Teques"
+      },
+      {
+        "ID": "1419",
+        "VALUE": "Caracas - cementerio"
+      },
+      {
+        "ID": "1417",
+        "VALUE": "Caracas- puente de hierro"
+      },
+      {
+        "ID": "1421",
+        "VALUE": "Caracas- Paraiso"
+      },
+      {
+        "ID": "1425",
+        "VALUE": "Caracas- caricuao"
+      },
+      {
+        "ID": "1427",
+        "VALUE": "Caracas-Carrizalez"
+      },
+      {
+        "ID": "1431",
+        "VALUE": "Caracas- S.A.de los Altos"
+      },
+      {
+        "ID": "1455",
+        "VALUE": "Caracas Vargas- la Guaira"
+      },
+      {
+        "ID": "1433",
+        "VALUE": "Caracas-P.del este"
+      },
+      {
+        "ID": "1437",
+        "VALUE": "Caracas - Los Samanes"
+      },
+      {
+        "ID": "1457",
+        "VALUE": "Caracas Vargas - litoral"
+      },
+      {
+        "ID": "2051",
+        "VALUE": "Caracas (Distrito Capital) - Libertador (Sucre)"
+      },
+      {
+        "ID": "1459",
+        "VALUE": "Caracas Vargas - Maiquetia"
+      },
+      {
+        "ID": "2059",
+        "VALUE": "Caracas (Distrito Capital) - Libertador (El Paraiso)"
+      },
+      {
+        "ID": "2035",
+        "VALUE": "Caracas (Caracas) - Libertador (Santa Rosalia)"
+      },
+      {
+        "ID": "2045",
+        "VALUE": "Caracas (Distrito Capital) - Libertador (La Pastora)"
+      },
+      {
+        "ID": "2053",
+        "VALUE": "Caracas (Miranda) - Acevedo (Aragüita)"
+      },
+      {
+        "ID": "2047",
+        "VALUE": "Caracas (Distrito Capital) - Libertador (La Candelaria)"
+      },
+      {
+        "ID": "2041",
+        "VALUE": "Caracas (Distrito Capital) - Libertador (San Pedro)"
+      },
+      {
+        "ID": "2063",
+        "VALUE": "Caracas (Distrito Capital) - Libertador (Santa Teresa)"
+      },
+      {
+        "ID": "2057",
+        "VALUE": "Caracas (Miranda) - Chacao (Chacao)"
+      },
+      {
+        "ID": "2069",
+        "VALUE": "Caracas (Distrito Capital) - Libertador (La Vega)"
+      },
+      {
+        "ID": "2075",
+        "VALUE": "Caracas (Distrito Capital) - LIbertador (Altagracia)"
+      },
+      {
+        "ID": "2067",
+        "VALUE": "Caracas (Distrito Capital) - Libertador (Catedral)"
+      },
+      {
+        "ID": "2065",
+        "VALUE": "Caracas (Miranda) - Los Salias (San Antonio De Los Altos)"
+      },
+      {
+        "ID": "2055",
+        "VALUE": "Caracas (Miranda) - Sucre (Petare)"
+      },
+      {
+        "ID": "2093",
+        "VALUE": "Caracas (Miranda) - Guicaipuro (San Pedro)"
+      },
+      {
+        "ID": "2087",
+        "VALUE": "Caracas (La Guira) - Vargas (Macuto)"
+      },
+      {
+        "ID": "2089",
+        "VALUE": "Caracas (Aragua) - Sucre (Sucre)"
+      },
+      {
+        "ID": "2049",
+        "VALUE": "Caracas (Distrito Capital) - Libertador (San Bernandino)"
+      },
+      {
+        "ID": "3619",
+        "VALUE": "Caracas (Miranda) - Urdaneta (CUA)"
+      },
+      {
+        "ID": "2077",
+        "VALUE": "Caracas (Miranda9 - Cristobal Rojas (Charallave)"
+      },
+      {
+        "ID": "2071",
+        "VALUE": "Caracas (Miranda) - Brion (Higuerote)"
+      },
+      {
+        "ID": "2095",
+        "VALUE": "Caracas (Miranda) - Baruta (El Cafetal)"
+      },
+      {
+        "ID": "2043",
+        "VALUE": "Caracas (La Guira) - Vargas (Caraballeda)"
+      },
+      {
+        "ID": "2073",
+        "VALUE": "Caracas (Miranda) - Guicaipuro (Los Teques)"
+      },
+      {
+        "ID": "2091",
+        "VALUE": "Caracas (Miranda) - Guaicaipuro (Cecilio Acosta)"
+      },
+      {
+        "ID": "2097",
+        "VALUE": "Caracas (Miranda) - Paez (Rio Chico)"
+      },
+      {
+        "ID": "2039",
+        "VALUE": "Caracas (Miranda) - Baruta (Baruta)"
+      },
+      {
+        "ID": "2083",
+        "VALUE": "Caracas (La Guira) - Vargas (Catia La Mar)"
+      },
+      {
+        "ID": "1533",
+        "VALUE": "Caracas- Higuerote"
+      },
+      {
+        "ID": "2081",
+        "VALUE": "Caracas (Miranda) - Los Salias (San Antonio)"
+      },
+      {
+        "ID": "3617",
+        "VALUE": "Caracas - La pastora (Catia Propatria)"
+      },
+      {
+        "ID": "2079",
+        "VALUE": "Caracas (Miranda) - Carrizal (Carrizal)"
+      },
+      {
+        "ID": "2037",
+        "VALUE": "Caracas (Caracas) - Libertador (San Juan)"
+      },
+      {
+        "ID": "2061",
+        "VALUE": "Caracas (Distrito Capital) - Libertador (Caricuao)"
+      },
+      {
+        "ID": "1535",
+        "VALUE": "Caracas - Distrito Capital"
+      },
+      {
+        "ID": "2085",
+        "VALUE": "Caracas (La Guaira) - Vargas (Carayaca)"
+      },
+      {
+        "ID": "2099",
+        "VALUE": "Caracas (Miranda) - Independencia (Santa Teresa Del Tuy)"
+      },
+      {
+        "ID": "2101",
+        "VALUE": "Caracas (Guarico) -Juan German Roscio(San Juan De Los Morro)"
+      },
+      {
+        "ID": "1531",
+        "VALUE": "Miranda - Altos Miranda"
+      },
+      {
+        "ID": "1217",
+        "VALUE": "Miranda-Charallave"
+      },
+      {
+        "ID": "1435",
+        "VALUE": "Miranda -Baruta"
+      },
+      {
+        "ID": "121",
+        "VALUE": "Miranda-Guatire"
+      },
+      {
+        "ID": "1659",
+        "VALUE": "Miranda-Santa Teresa Del Tuy"
+      },
+      {
+        "ID": "1649",
+        "VALUE": "Miranda-Carrizal"
+      },
+      {
+        "ID": "1653",
+        "VALUE": "Miranda-Rio chico"
+      },
+      {
+        "ID": "3289",
+        "VALUE": "miranda"
+      },
+      {
+        "ID": "1525",
+        "VALUE": "Miranda- teques"
+      },
+      {
+        "ID": "1655",
+        "VALUE": "Miranda-El Cafetal"
+      },
+      {
+        "ID": "1529",
+        "VALUE": "Miranda QUE REVISAR 2"
+      },
+      {
+        "ID": "1657",
+        "VALUE": "Miranda - San Diego de los Altos"
+      },
+      {
+        "ID": "157",
+        "VALUE": "Falcon-Coro"
+      },
+      {
+        "ID": "881",
+        "VALUE": "Falcon-Punto Fijo"
+      },
+      {
+        "ID": "197",
+        "VALUE": "Falcon-Falcon"
+      },
+      {
+        "ID": "135",
+        "VALUE": "Lara-Cabudare"
+      },
+      {
+        "ID": "137",
+        "VALUE": "Lara-Barquisimeto"
+      },
+      {
+        "ID": "1675",
+        "VALUE": "Anzoategui- Pozuelos"
+      },
+      {
+        "ID": "863",
+        "VALUE": "Anzoategui-Barcelona"
+      },
+      {
+        "ID": "125",
+        "VALUE": "Anzoategui-lecheria"
+      },
+      {
+        "ID": "1233",
+        "VALUE": "Anzoategui-Tigre"
+      },
+      {
+        "ID": "1677",
+        "VALUE": "Anzoategui- Puerto la cruz"
+      },
+      {
+        "ID": "1519",
+        "VALUE": "Cojedes-Agua Linda"
+      },
+      {
+        "ID": "1583",
+        "VALUE": "Cojedes-San Carlos"
+      },
+      {
+        "ID": "3557",
+        "VALUE": "Cojedes(Anzoategui)Tinaquillo"
+      },
+      {
+        "ID": "3559",
+        "VALUE": "Cojedes(Falcon)Tinaquillo"
+      },
+      {
+        "ID": "1585",
+        "VALUE": "Cojedes-Tinaco"
+      },
+      {
+        "ID": "1587",
+        "VALUE": "Cojedes ( Tinaco) - General en Jefe Laurencio Silva"
+      },
+      {
+        "ID": "1671",
+        "VALUE": "Cojedes - Las Vegas"
+      },
+      {
+        "ID": "1717",
+        "VALUE": "Guarico - Calabozo"
+      },
+      {
+        "ID": "1719",
+        "VALUE": "Guarico -  La Negra"
+      },
+      {
+        "ID": "1721",
+        "VALUE": "Guarico - San Juan De Los Morros"
+      },
+      {
+        "ID": "1723",
+        "VALUE": "Guarico - Camaguan"
+      },
+      {
+        "ID": "1463",
+        "VALUE": "Guarico - Cazorla"
+      },
+      {
+        "ID": "1725",
+        "VALUE": "Guarico - Guayabal (Pueblo nuevo)"
+      },
+      {
+        "ID": "3731",
+        "VALUE": "SAN JUAN DE LOS MORROS(ROSCIO) GUARICO"
+      },
+      {
+        "ID": "1739",
+        "VALUE": "Monagas - Corozo"
+      },
+      {
+        "ID": "1741",
+        "VALUE": "Monagas - San Vicente"
+      },
+      {
+        "ID": "1791",
+        "VALUE": "Amazonas - Puerto Ayacucho"
+      },
+      {
+        "ID": "1793",
+        "VALUE": "Frontera ( Tachira) - Independencia ( Capacho Nuevo)"
+      },
+      {
+        "ID": "1795",
+        "VALUE": "Frontera (Tachira) - Junin (Bramon)"
+      },
+      {
+        "ID": "185",
+        "VALUE": "Frontera (Tachira) - Bolivar ( San Antonio del Tachira)"
+      },
+      {
+        "ID": "161",
+        "VALUE": "Frontera ( Tachira) - Junin ( Rubio)"
+      },
+      {
+        "ID": "1801",
+        "VALUE": "Frontera (Tachira) - Independencia ( Juan German Roscio)"
+      },
+      {
+        "ID": "1797",
+        "VALUE": "Frontera ( Tachira) - Libertad ( Capacho Viejo)"
+      },
+      {
+        "ID": "1803",
+        "VALUE": "Frontera (Tachira) - Bolivar ( Palotal)"
+      },
+      {
+        "ID": "143",
+        "VALUE": "Frontera (Tachira) - Pedro Maria Ureña (Ureña)"
+      },
+      {
+        "ID": "1811",
+        "VALUE": "Panamericana (Tachira) - Independencia (Peribeca)"
+      },
+      {
+        "ID": "1813",
+        "VALUE": "Panamericana (Tachira) - Lobatera (Borota)"
+      },
+      {
+        "ID": "165",
+        "VALUE": "Panamericana (Tachira) - Seboruco (Seboruco)"
+      },
+      {
+        "ID": "153",
+        "VALUE": "Panamericana (Tachira) - Guasimos (Palmira)"
+      },
+      {
+        "ID": "169",
+        "VALUE": "Panamericana (Tachira) - Michelena (Michelena)"
+      },
+      {
+        "ID": "193",
+        "VALUE": "Panamericana (Tachira) - Andres Bello (Cordero)"
+      },
+      {
+        "ID": "1819",
+        "VALUE": "Panamericana (Tachira) - San Judas Tadeo (Umuquena)"
+      },
+      {
+        "ID": "133",
+        "VALUE": "Panamericana (Tachira) - Ayacucho (San Juan de Colon)"
+      },
+      {
+        "ID": "159",
+        "VALUE": "Panamericana (Tachira) - Jauregui (La Grita)"
+      },
+      {
+        "ID": "155",
+        "VALUE": "Panamericana (Tachira) - Panamericano (Coloncito)"
+      },
+      {
+        "ID": "3971",
+        "VALUE": "panamericana (tachira) - Sucre (Eclesial ntra señora del r)"
+      },
+      {
+        "ID": "1829",
+        "VALUE": "Panamericana (Tachira) - Jauregui (Monseñor Miguel...)"
+      },
+      {
+        "ID": "1831",
+        "VALUE": "Panamericana (Tachira) - Antonio Romulo Costa ( Las Mesas)"
+      },
+      {
+        "ID": "1833",
+        "VALUE": "Panamericana (Tachira) - Jauregui (Emilio Constantino...)"
+      },
+      {
+        "ID": "1837",
+        "VALUE": "Panamericana (Tachira) - Lobatera (Palo Grande)"
+      },
+      {
+        "ID": "1839",
+        "VALUE": "Panamericana (Tachira) - Guasimos (Copa de Oro)"
+      },
+      {
+        "ID": "163",
+        "VALUE": "Panamerica (Tachira) -Jose Maria Vargas (El Cobre)"
+      },
+      {
+        "ID": "1841",
+        "VALUE": "Panamericana (Tachira) - Cardenas(Amenodo Rangel Lamus)"
+      },
+      {
+        "ID": "1843",
+        "VALUE": "Panamericana (Tachira) - Francisco de Miranda (San Jose...)"
+      },
+      {
+        "ID": "131",
+        "VALUE": "Panamericana (Tachira) - Garcia de Hevia (La Fria)"
+      },
+      {
+        "ID": "1913",
+        "VALUE": ". BAILADORES ELIMINAR"
+      },
+      {
+        "ID": "1921",
+        "VALUE": "TOVAR ELIMINAR"
+      },
+      {
+        "ID": "1951",
+        "VALUE": "SANTA BARBARA ELIMINAR ZULIA"
+      },
+      {
+        "ID": "1979",
+        "VALUE": ". LAGUNILLA ELIMINAR"
+      },
+      {
+        "ID": "2103",
+        "VALUE": "Trujillo (Trujillo)- valera (juan ignacio montilla)"
+      },
+      {
+        "ID": "2105",
+        "VALUE": "Trujillo  (Zulia) -maracaibo ( Olegario Villalobos)"
+      },
+      {
+        "ID": "2107",
+        "VALUE": "Trujillo - (trujillo ) - Andres Bello (Araguaney)"
+      },
+      {
+        "ID": "2109",
+        "VALUE": "Trujillo - ( Trujillo) - Andres Bello (Jaquito)"
+      },
+      {
+        "ID": "2111",
+        "VALUE": "Trujillo ( Trujillo) - Andres Bello (Santa Isabel)"
+      },
+      {
+        "ID": "2113",
+        "VALUE": "Trujillo (trujillo) - Bocono (Bocono)"
+      },
+      {
+        "ID": "2115",
+        "VALUE": "Trujillo (trujillo) - Bocono (el carmen)"
+      },
+      {
+        "ID": "1559",
+        "VALUE": "Trujillo-Valera"
+      },
+      {
+        "ID": "2117",
+        "VALUE": "Trujillo (Trujillo) - Bocono (jauregui)"
+      },
+      {
+        "ID": "2119",
+        "VALUE": "Trujillo (Trujillo) - Bocono (rafael Rangel)"
+      },
+      {
+        "ID": "2121",
+        "VALUE": "Trujillo (trujillo) - Bolivar (Granados)"
+      },
+      {
+        "ID": "1765",
+        "VALUE": "Trujillo - Zulia (La Linea)"
+      },
+      {
+        "ID": "2123",
+        "VALUE": "Trujillo ( Trujillo) - Bolivar (sabana Grande)"
+      },
+      {
+        "ID": "1763",
+        "VALUE": "Trujillo - San Pedro Lagunilla"
+      },
+      {
+        "ID": "2125",
+        "VALUE": "Trujillo ( Trujillo) - candelaria ( Chejende)"
+      },
+      {
+        "ID": "1759",
+        "VALUE": "Trujillo - Sabana Grande"
+      },
+      {
+        "ID": "1761",
+        "VALUE": "Trujillo - Sabana Mendoza"
+      },
+      {
+        "ID": "2127",
+        "VALUE": "Trujillo ( Trujillo) - Escuque (Sabana Libre)"
+      },
+      {
+        "ID": "2129",
+        "VALUE": "Trujillo ( Trujillo) - La Ceiba (Tres de Febrero)"
+      },
+      {
+        "ID": "2131",
+        "VALUE": "Trujillo ( Trujillo ) - Miranda (El Dividive)"
+      },
+      {
+        "ID": "2133",
+        "VALUE": "Trujillo (Trujillo) - Monte Carmelo (Buena Vista)"
+      },
+      {
+        "ID": "149",
+        "VALUE": "Trujillo-Bocono"
+      },
+      {
+        "ID": "1553",
+        "VALUE": "Trujillo-Trujillo"
+      },
+      {
+        "ID": "2135",
+        "VALUE": "Trujillo ( Trujillo) - Pampan (Flor de Patria)"
+      },
+      {
+        "ID": "1757",
+        "VALUE": "Trujillo - Granados"
+      },
+      {
+        "ID": "2137",
+        "VALUE": "Trujillo ( Trujillo) - Pampan (la Paz)"
+      },
+      {
+        "ID": "2139",
+        "VALUE": "Trujillo ( Trujillo) - Pampanito (Pampanito)"
+      },
+      {
+        "ID": "3137",
+        "VALUE": "Trujillo (Trujillo) - La Ceiba (Santa Apolonia)"
+      },
+      {
+        "ID": "2141",
+        "VALUE": "Trujillo (Trujillo) - San rafael Carvajal (Antonio Nicolas )"
+      },
+      {
+        "ID": "2143",
+        "VALUE": "Trujillo (Trujillo) - Sucre ( Sabana De Mendoza)"
+      },
+      {
+        "ID": "2145",
+        "VALUE": "Trujillo - (Trujillo) trujillo (cristobal mendoza)"
+      },
+      {
+        "ID": "2147",
+        "VALUE": "Trujillo (Trujillo) - Trujillo (matriz)"
+      },
+      {
+        "ID": "2149",
+        "VALUE": "Trujillo (trujillo) - trujillo(cruz carrillo)"
+      },
+      {
+        "ID": "2151",
+        "VALUE": "Trujillo (Trujillo) - Urdaneta (la quebrada)"
+      },
+      {
+        "ID": "2153",
+        "VALUE": "Trujillo (Trujillo) - Urdaneta(Jajo)"
+      },
+      {
+        "ID": "2155",
+        "VALUE": "Trujillo (Trujillo) - Valera  (mendoza fria)"
+      },
+      {
+        "ID": "2157",
+        "VALUE": "Trujillo (Trujillo) - valera ( Juan Ignacio Montilla)"
+      },
+      {
+        "ID": "2159",
+        "VALUE": "Trujillo (Trujillo) - Valera ( Mercedes Diaz)"
+      },
+      {
+        "ID": "2161",
+        "VALUE": "Trujillo (Trujillo) - Valera (la Puerta)"
+      },
+      {
+        "ID": "2163",
+        "VALUE": "Trujillo (zulia) - baralt - (pueblo nuevo)"
+      },
+      {
+        "ID": "2165",
+        "VALUE": "Trujillo (Zulia) - baralt - San Timoteo"
+      },
+      {
+        "ID": "2167",
+        "VALUE": "Trujillo ( Zulia) - Baralt ( General Urdaneta. Mene Grande)"
+      },
+      {
+        "ID": "2169",
+        "VALUE": "Trujillo ( Zulia) - Baralt ( Libertador)"
+      },
+      {
+        "ID": "2171",
+        "VALUE": "Trujillo (Zulia) - Lagunilla (Libertad)"
+      },
+      {
+        "ID": "2173",
+        "VALUE": "Trujillo (Zulia) - Rosario de perija (el Rosario)"
+      },
+      {
+        "ID": "3369",
+        "VALUE": "Trujillo (Trujillo)- Rafael Rangel ( Betijoque)"
+      },
+      {
+        "ID": "3371",
+        "VALUE": "Trujillo Trujillo - Bocono (General rivas)"
+      },
+      {
+        "ID": "3443",
+        "VALUE": "Trujillo (bocono) Burbusay"
+      },
+      {
+        "ID": "3445",
+        "VALUE": "Trujillo (Monte Carmelo) Monte Carmelo"
+      },
+      {
+        "ID": "2175",
+        "VALUE": "Portuguesa Alta (Lara) - Simon planas (Sarare)"
+      },
+      {
+        "ID": "1201",
+        "VALUE": "Portuguesa Alta (Portuguesa) - Paez (Acarigua)"
+      },
+      {
+        "ID": "1203",
+        "VALUE": "Portuguesa alta (Portuguesa) - Turen (Turen)"
+      },
+      {
+        "ID": "1183",
+        "VALUE": "Portugesa Baja (Portuguesa) - Sucre (Biscucuy)"
+      },
+      {
+        "ID": "2177",
+        "VALUE": "Portuguesa Alta  (Portuguesa) - Agua Blanca (Agua Blanca)"
+      },
+      {
+        "ID": "1185",
+        "VALUE": "Portuguesa Alta (Barinas)-San gerardo de boconoito (boconoit"
+      },
+      {
+        "ID": "1187",
+        "VALUE": "Portuguesa baja (Portuguesa) -Jose vicente de unda Chabasque"
+      },
+      {
+        "ID": "1193",
+        "VALUE": "Portuguesa baja (Portuguesa) - Osipino (Ospino)"
+      },
+      {
+        "ID": "1199",
+        "VALUE": "Portuguesa alta (Portuguesa) - Araure (Araure)"
+      },
+      {
+        "ID": "1191",
+        "VALUE": "Portugesa baja (Portuguesa) - Guanare (Guanare)"
+      },
+      {
+        "ID": "1197",
+        "VALUE": "Portuguesa Alta (Portuguesa) - Esteller (Piritu)"
+      },
+      {
+        "ID": "1195",
+        "VALUE": "Portuguesa Baja (Portuguesa) - Guanarito (Guanarito)"
+      },
+      {
+        "ID": "1521",
+        "VALUE": "Portuguesa alta (Portuguesa) - Santa rosalia (El playon)"
+      },
+      {
+        "ID": "1207",
+        "VALUE": "Portuguesa Alta (Portuguesa) - San Rafael de Onoto (San Rafael de Onoto)"
+      },
+      {
+        "ID": "1257",
+        "VALUE": "Portuguesa-La Mision"
+      },
+      {
+        "ID": "1189",
+        "VALUE": "Portuguesa-Las Mesas De Cavaca"
+      },
+      {
+        "ID": "1253",
+        "VALUE": "Portuguesa Alta (Lara) - Simon Planas (Sarare)"
+      },
+      {
+        "ID": "2179",
+        "VALUE": "Portuguesa baja- (Portuguesa) -Guanare (San juan de guanare)"
+      },
+      {
+        "ID": "2181",
+        "VALUE": "Portuguesa Alta (Portuguesa) - Turen (Villa Bruzual)"
+      },
+      {
+        "ID": "1205",
+        "VALUE": "Portuguesa Alta (Portuguesa) -Agua blanca (Agua Blanca)"
+      },
+      {
+        "ID": "2183",
+        "VALUE": "Portuguesa Alta (Portuguesa) - Turen (Canelones)"
+      },
+      {
+        "ID": "1255",
+        "VALUE": "Portuguesa Alta (Lara) -Simon Planas (Gustavo Delgado)"
+      },
+      {
+        "ID": "3561",
+        "VALUE": "Portuguesa baja (Portuguesa) - Papelon (Papelon)"
+      },
+      {
+        "ID": "3567",
+        "VALUE": "Portuguesa baja (Portuguesa) San juan guanare(Mesas de cava)"
+      },
+      {
+        "ID": "3087",
+        "VALUE": "Portuguesa Baja (Portuguesa) San nicolas- San nicolas"
+      },
+      {
+        "ID": "3089",
+        "VALUE": "PLAZA (TACHIRA) - ANDRES BELLO - (ANDRES BELLO)"
+      },
+      {
+        "ID": "3095",
+        "VALUE": "PLAZA-PANAMERICANA (TACHIRA) - CARDENAS - (TARIBA)"
+      },
+      {
+        "ID": "3107",
+        "VALUE": "PLAZA-PANAMERICANA (TACHIRA) - GUASIMOS - (GUASIMOS)"
+      },
+      {
+        "ID": "3109",
+        "VALUE": "PLAZA-PANAMERICANA (TACHIRA) - PALO GORDO - (AMENODORO RANG)"
+      },
+      {
+        "ID": "3091",
+        "VALUE": "PLAZA-PANAMERICANA (TACHIRA) - CARDENAS - AMENODORO RANGEL"
+      },
+      {
+        "ID": "3113",
+        "VALUE": "PLAZA (TACHIRA) - SAN CRISTOBAL - (PEDRO MARIA MORANTES)"
+      },
+      {
+        "ID": "3115",
+        "VALUE": "PLAZA (TACHIRA) - SAN CRISTOBAL - (LA CONCORDIA)"
+      },
+      {
+        "ID": "3117",
+        "VALUE": "PLAZA (TACHIRA) - SAN CRISTOBAL - (SAN JUAN BAUTISTA)"
+      },
+      {
+        "ID": "3119",
+        "VALUE": "PLAZA (TACHIRA) - SAN CRISTOBAL - (SAN SEBASTIAN)"
+      },
+      {
+        "ID": "151",
+        "VALUE": "LLANO (TACHIRA) - CORDOBA - Santa Ana"
+      },
+      {
+        "ID": "3101",
+        "VALUE": "LLANO (TACHIRA) - FERNADEZ FEO - (FERNANDEZ FEO)"
+      },
+      {
+        "ID": "3103",
+        "VALUE": "LLANO (TACHIRA) - FERNANDEZ FEO - (SAN RAFAEL DEL PIÑAL)"
+      },
+      {
+        "ID": "3105",
+        "VALUE": "LLANO (TACHIRA) - FERNANDEZ FEO - ( SANTO DOMINGO)"
+      },
+      {
+        "ID": "179",
+        "VALUE": "LLANO (APURE) - PAEZ - (SAN CAMILO)"
+      },
+      {
+        "ID": "3121",
+        "VALUE": "LLANO (TACHIRA) - URIBANTE - (PREGONERO)"
+      },
+      {
+        "ID": "3285",
+        "VALUE": "LLano (Tachira) - Torbes (San josecito)"
+      },
+      {
+        "ID": "183",
+        "VALUE": "Barinas-Sabaneta"
+      },
+      {
+        "ID": "3377",
+        "VALUE": "Barinas (Barinas) - Alberto Torrealba (Rodriguez Dominguez)"
+      },
+      {
+        "ID": "911",
+        "VALUE": "Barinas-Chameta"
+      },
+      {
+        "ID": "865",
+        "VALUE": "Barinas-Barinitas"
+      },
+      {
+        "ID": "1703",
+        "VALUE": "Barinas - Boconoito"
+      },
+      {
+        "ID": "909",
+        "VALUE": "Barinas-Alto barinas"
+      },
+      {
+        "ID": "867",
+        "VALUE": "Barinas-Barrancas"
+      },
+      {
+        "ID": "3379",
+        "VALUE": "Barinas Andes (Barinas)- Antonio Jose de Sucre (Ticoporo)"
+      },
+      {
+        "ID": "3381",
+        "VALUE": "Barinas (Barinas)- Barinas (Alfredo Arvelo Larriva)"
+      },
+      {
+        "ID": "3383",
+        "VALUE": "Barinas (Barinas)- Barinas (Alto Barinas)"
+      },
+      {
+        "ID": "3385",
+        "VALUE": "Barinas (Barinas)- Barinas (Barinas)"
+      },
+      {
+        "ID": "3387",
+        "VALUE": "Barinas (Barinas)- Barinas (Corazon de Jesus)"
+      },
+      {
+        "ID": "1705",
+        "VALUE": "Barinas - Obispo"
+      },
+      {
+        "ID": "3389",
+        "VALUE": "Barinas (Barinas)- Barinas (El Carmen)"
+      },
+      {
+        "ID": "1701",
+        "VALUE": "Barinas - Alberto Torrealba"
+      },
+      {
+        "ID": "207",
+        "VALUE": "Barinas-Ciudad Barinas"
+      },
+      {
+        "ID": "1229",
+        "VALUE": "barinas Andes (Tachira) - Libertador (Don Emeterio Ochoa) San joaquin navay"
+      },
+      {
+        "ID": "209",
+        "VALUE": "Barinas-Santa Barbara"
+      },
+      {
+        "ID": "1699",
+        "VALUE": "Barinas - Santa Rosa"
+      },
+      {
+        "ID": "3391",
+        "VALUE": "Barinas (Barinas)- Barinas (Ramon Ignacio Mendez)"
+      },
+      {
+        "ID": "3393",
+        "VALUE": "Barinas (Barinas)- Barinas (Romulo Betancourt)"
+      },
+      {
+        "ID": "3395",
+        "VALUE": "Barinas (Barinas)- Barinas (Santa Lucia)"
+      },
+      {
+        "ID": "1695",
+        "VALUE": "Barinas - Santa Ines"
+      },
+      {
+        "ID": "871",
+        "VALUE": "Barinas-Capitanejo"
+      },
+      {
+        "ID": "873",
+        "VALUE": "Barinas-Ciudad Bolivia"
+      },
+      {
+        "ID": "1697",
+        "VALUE": "Barinas - Santa Lucia"
+      },
+      {
+        "ID": "3397",
+        "VALUE": "Barinas (Barinas)- Bolivar (Barinitas)"
+      },
+      {
+        "ID": "205",
+        "VALUE": "Barinas-Socopo"
+      },
+      {
+        "ID": "3399",
+        "VALUE": "Barinas Andes (Barinas)- Ezequiel Zamora (Pedro Briceño...)"
+      },
+      {
+        "ID": "3401",
+        "VALUE": "Barinas Andes (Barinas)- Ezequiel Zamora (Ramon Ignacio...)"
+      },
+      {
+        "ID": "1693",
+        "VALUE": "Barinas - Caño Del Medio"
+      },
+      {
+        "ID": "3403",
+        "VALUE": "Barinas Andes (Barinas)- Ezequiel Zamora (Santa Barbara)"
+      },
+      {
+        "ID": "3405",
+        "VALUE": "Barinas (Barinas)- Obispos (Guasimitos)"
+      },
+      {
+        "ID": "3407",
+        "VALUE": "Barinas (Barinas)- Pedraza (Paez)"
+      },
+      {
+        "ID": "1277",
+        "VALUE": "Barinas-Punta De Piedra"
+      },
+      {
+        "ID": "3409",
+        "VALUE": "Barinas Andes (Barinas)- Pedraza (ciudad Bolivia)"
+      },
+      {
+        "ID": "145",
+        "VALUE": "Barinas-Barinas"
+      },
+      {
+        "ID": "3411",
+        "VALUE": "Barinas (Barinas)- Rojas (Dolores)"
+      },
+      {
+        "ID": "3413",
+        "VALUE": "Barinas (Barinas)- Rojas (Libertad)"
+      },
+      {
+        "ID": "3415",
+        "VALUE": "Barinas (Barinas)- Rojas (Simon Rodriguez)"
+      },
+      {
+        "ID": "3417",
+        "VALUE": "Barinas (Barinas)- Sosa (Ciudad Nutrias)"
+      },
+      {
+        "ID": "3419",
+        "VALUE": "Barinas Andes (Tachira) Andres Bello (Andres Bello)"
+      },
+      {
+        "ID": "3421",
+        "VALUE": "Barinas Andes (Tachira)- Libertador (Don Emeterio)"
+      },
+      {
+        "ID": "3423",
+        "VALUE": "Barinas Andes (Tachira)- Libertador (Libertador)"
+      },
+      {
+        "ID": "3425",
+        "VALUE": "Barinas (Barinas)- Alberto Arvelo Torrealba (Sabaneta)"
+      },
+      {
+        "ID": "3427",
+        "VALUE": "Barinas Andes (Barinas)- Antonio Jose... (Nicolas Pulido)"
+      },
+      {
+        "ID": "3429",
+        "VALUE": "Barinas Andes (Barinas)- Antonio Jose... (Andres Bello)"
+      },
+      {
+        "ID": "3431",
+        "VALUE": "Barinas Andes (Barinas)- Barinas (Dominga Ortiz de Paez)"
+      },
+      {
+        "ID": "3433",
+        "VALUE": "Barinas (Barinas)- Cruz Paredes (Barrancas)"
+      },
+      {
+        "ID": "3435",
+        "VALUE": "Barinas Andes (Barinas)- Ezequiel Zamora (Jose Ignacio...)"
+      },
+      {
+        "ID": "3437",
+        "VALUE": "Barinas (Barinas)- Obispo (Obispo)"
+      },
+      {
+        "ID": "3439",
+        "VALUE": "Barinas (Portuguesa)- San Genaro de Boconoito (Boconoito)"
+      },
+      {
+        "ID": "3909",
+        "VALUE": "Barinas (Barinas) Rojas Libertador)"
+      },
+      {
+        "ID": "3483",
+        "VALUE": "Zulia - Bachaquero"
+      },
+      {
+        "ID": "129",
+        "VALUE": "Zulia-Maracaibo"
+      },
+      {
+        "ID": "3485",
+        "VALUE": "Zulia - Andres E. Blanco"
+      },
+      {
+        "ID": "3487",
+        "VALUE": "Zulia - Ciudad Ojeda"
+      },
+      {
+        "ID": "3489",
+        "VALUE": "Zulia - El Pinar"
+      },
+      {
+        "ID": "1787",
+        "VALUE": "Zulia - Caja Seca"
+      },
+      {
+        "ID": "3491",
+        "VALUE": "Zulia - Gallo Verde"
+      },
+      {
+        "ID": "3493",
+        "VALUE": "Zulia - Jose maria seprun"
+      },
+      {
+        "ID": "3495",
+        "VALUE": "Zulia - Rosario Perija"
+      },
+      {
+        "ID": "1771",
+        "VALUE": "Zulia - Cabimas"
+      },
+      {
+        "ID": "203",
+        "VALUE": "Zulia-Machiques"
+      },
+      {
+        "ID": "1779",
+        "VALUE": "Zulia - Miranda"
+      },
+      {
+        "ID": "1785",
+        "VALUE": "Zulia (Merida) - Encontrados"
+      },
+      {
+        "ID": "1783",
+        "VALUE": "Zulia - Santa CXruz Del Zulia"
+      },
+      {
+        "ID": "1641",
+        "VALUE": "Zulia-El Moralito"
+      },
+      {
+        "ID": "1777",
+        "VALUE": "Zulia - Maracaibo"
+      },
+      {
+        "ID": "3497",
+        "VALUE": "Zulia - Santa Rita"
+      },
+      {
+        "ID": "1773",
+        "VALUE": "Zulia - Casigua El Cubo"
+      },
+      {
+        "ID": "1775",
+        "VALUE": "Zulia - El Chivo"
+      },
+      {
+        "ID": "1781",
+        "VALUE": "Zulia - San Carlos Del Zulia"
+      },
+      {
+        "ID": "3499",
+        "VALUE": "Zulia - Villa del Rosario"
+      },
+      {
+        "ID": "3531",
+        "VALUE": "Yaracuy ( Aristides Bastidas ) Aristides Bastidas"
+      },
+      {
+        "ID": "3551",
+        "VALUE": "Yaracuy (Cocorote) Cocorote"
+      },
+      {
+        "ID": "171",
+        "VALUE": "Yaracuy-San Felipe"
+      },
+      {
+        "ID": "1769",
+        "VALUE": "Yaracuy - Cocorote"
+      },
+      {
+        "ID": "3293",
+        "VALUE": "San Felipe Estado Yaracuy"
+      },
+      {
+        "ID": "3569",
+        "VALUE": "Aragua - ( Iragorry ) El Limon"
+      },
+      {
+        "ID": "3571",
+        "VALUE": "Aragua  - ( Iragorry ) Caña de azucar"
+      },
+      {
+        "ID": "3573",
+        "VALUE": "Aragua -  (Girardot) Los tacariguas"
+      },
+      {
+        "ID": "3575",
+        "VALUE": "Aragua- ( Girardot) Andres Eloy Blanco"
+      },
+      {
+        "ID": "3577",
+        "VALUE": "Aragua  - (Girardot) Las Delicias"
+      },
+      {
+        "ID": "3579",
+        "VALUE": "Aragua - (Girardot) Madre Maria de San Jose"
+      },
+      {
+        "ID": "3581",
+        "VALUE": "Aragua  - (Ocumare de la costa de oro) Ocumare de la costa"
+      },
+      {
+        "ID": "123",
+        "VALUE": "Aragua-Turmero"
+      },
+      {
+        "ID": "3583",
+        "VALUE": "Aragua - (Girardot) Joaquin Crespo"
+      },
+      {
+        "ID": "3585",
+        "VALUE": "Aragua -(Girardot ) - Choroni"
+      },
+      {
+        "ID": "3587",
+        "VALUE": "Aragua - (Mariño) Saman Guere"
+      },
+      {
+        "ID": "3589",
+        "VALUE": "Aragua - (Mariño) Arevalo Aponte"
+      },
+      {
+        "ID": "3591",
+        "VALUE": "Aragua - ( Girardot) Pedro Jose Ovalles"
+      },
+      {
+        "ID": "3593",
+        "VALUE": "Aragua-( Francisco linares Alcantara ) Santa Rita"
+      },
+      {
+        "ID": "3595",
+        "VALUE": "Aragua - ( Libertador) San Martin de Porras"
+      },
+      {
+        "ID": "3597",
+        "VALUE": "Aragua - (Libertador ) Palo Negro"
+      },
+      {
+        "ID": "1691",
+        "VALUE": "Aragua - Zamora"
+      },
+      {
+        "ID": "3599",
+        "VALUE": "Aragua -(Jose Angel Lamas) Santa Cruz del Sur"
+      },
+      {
+        "ID": "3925",
+        "VALUE": "Aragua (Aragua) - Girardot ( jose Casanova Godoy )"
+      },
+      {
+        "ID": "3601",
+        "VALUE": "Aragua - (Sucre ) Cagua"
+      },
+      {
+        "ID": "1689",
+        "VALUE": "Aragua - Tejeria"
+      },
+      {
+        "ID": "3603",
+        "VALUE": "Aragua -( Jose Rafael Revenga) El Consejo"
+      },
+      {
+        "ID": "3605",
+        "VALUE": "Aragua- ( Jose Felix Ribas)- Castor Nieves Ribas"
+      },
+      {
+        "ID": "3607",
+        "VALUE": "Aragua - ( Tovar) Colonia Tovar"
+      },
+      {
+        "ID": "3609",
+        "VALUE": "Aragua - ( Bolivar) - San Mateo"
+      },
+      {
+        "ID": "1651",
+        "VALUE": "Aragua-Cagua"
+      },
+      {
+        "ID": "3611",
+        "VALUE": "Aragua- ( Zamora ) villa de cura"
+      },
+      {
+        "ID": "3613",
+        "VALUE": "Aragua- (Mariño) Saman Guere"
+      },
+      {
+        "ID": "3953",
+        "VALUE": "ARAGUA - (URDANETA) - TAGUAY"
+      },
+      {
+        "ID": "3945",
+        "VALUE": "ARAGUA - (SAN SEBASTIAN) - SAN SEBASTIAN"
+      },
+      {
+        "ID": "3949",
+        "VALUE": "ARAGUA - (URDANETA) - LAS PEÑITAS"
+      },
+      {
+        "ID": "3947",
+        "VALUE": "ARAGUA - (URDANETA) - URDANETA"
+      },
+      {
+        "ID": "3951",
+        "VALUE": "ARAGUA - (URDANETA) - SAN FRANCISCO DE CARA"
+      },
+      {
+        "ID": "3931",
+        "VALUE": "Aragua (Aragua) - Santos Michelena (Las Tejerías)"
+      },
+      {
+        "ID": "3933",
+        "VALUE": "Aragua (Aragua) - Tovar (Colonia Tovar)"
+      },
+      {
+        "ID": "3319",
+        "VALUE": "Guacara"
+      },
+      {
+        "ID": "3307",
+        "VALUE": "campo carabobo"
+      },
+      {
+        "ID": "3317",
+        "VALUE": "Los guayos"
+      },
+      {
+        "ID": "3449",
+        "VALUE": "Cara/Yara (Carabobo)- Bejuma (Canoabo)"
+      },
+      {
+        "ID": "3447",
+        "VALUE": "carabobo"
+      },
+      {
+        "ID": "139",
+        "VALUE": "Carabobo-Valencia"
+      },
+      {
+        "ID": "1707",
+        "VALUE": "Carabobo - Bejuma"
+      },
+      {
+        "ID": "3539",
+        "VALUE": "Carabobo ( Carlos Arvelo) Urbana Tacarigua"
+      },
+      {
+        "ID": "1709",
+        "VALUE": "Carabobo - Guacara"
+      },
+      {
+        "ID": "3541",
+        "VALUE": "Carabobo ( Libertador ) Tocuyito"
+      },
+      {
+        "ID": "3533",
+        "VALUE": "Carabobo ( Valencia ) Urbana Candelaria"
+      },
+      {
+        "ID": "3549",
+        "VALUE": "Carabobo ( Montalban) Montalban"
+      },
+      {
+        "ID": "3543",
+        "VALUE": "Carabobo (Jjuan Jose Mora ) Moron"
+      },
+      {
+        "ID": "1711",
+        "VALUE": "Carabobo - Los Guayos"
+      },
+      {
+        "ID": "1713",
+        "VALUE": "Carabobo - Montalban"
+      },
+      {
+        "ID": "3453",
+        "VALUE": "Carabobo (Miranda) Miranda"
+      },
+      {
+        "ID": "3547",
+        "VALUE": "Carabobo ( Bejuma) Conoabo"
+      },
+      {
+        "ID": "1715",
+        "VALUE": "Carabobo - Puerto Cabello"
+      },
+      {
+        "ID": "3537",
+        "VALUE": "Carabobo ( Valencia ) Santa Rosa"
+      },
+      {
+        "ID": "3535",
+        "VALUE": "Carabobo ( Valencia ) Miguel Peña"
+      },
+      {
+        "ID": "3565",
+        "VALUE": "Carabobo ( Urbana Rafael Urdaneta ) Valencia"
+      },
+      {
+        "ID": "3451",
+        "VALUE": "Carabobo (carlos Arvelo) urbana guiguie"
+      },
+      {
+        "ID": "3545",
+        "VALUE": "Carabobo( Valencia) El Socorro"
+      },
+      {
+        "ID": "3555",
+        "VALUE": "Carabobo ( Los Guayos ) Guayos"
+      },
+      {
+        "ID": "3295",
+        "VALUE": "Zona sur de valencia Monumental"
+      },
+      {
+        "ID": "3441",
+        "VALUE": "Valencia"
+      },
+      {
+        "ID": "1629",
+        "VALUE": "Internacional"
+      },
+      {
+        "ID": "3323",
+        "VALUE": "Montalban"
+      },
+      {
+        "ID": "3287",
+        "VALUE": "bejuma"
+      },
+      {
+        "ID": "3321",
+        "VALUE": "Isabelica"
+      },
+      {
+        "ID": "3315",
+        "VALUE": "el cambur"
+      },
+      {
+        "ID": "3313",
+        "VALUE": "moron"
+      },
+      {
+        "ID": "3291",
+        "VALUE": "nirgua"
+      },
+      {
+        "ID": "3299",
+        "VALUE": "tocuyito"
+      },
+      {
+        "ID": "3301",
+        "VALUE": "mayorista"
+      },
+      {
+        "ID": "3303",
+        "VALUE": "caobos"
+      },
+      {
+        "ID": "3309",
+        "VALUE": "av Lisandro Alvarado"
+      },
+      {
+        "ID": "1743",
+        "VALUE": "Sucre - Cumana"
+      },
+      {
+        "ID": "3305",
+        "VALUE": "la honda"
+      },
+      {
+        "ID": "3311",
+        "VALUE": "puerto cabello"
+      },
+      {
+        "ID": "3297",
+        "VALUE": "NAGUANAGUA"
+      },
+      {
+        "ID": "1767",
+        "VALUE": "Vargas - Macuto"
+      },
+      {
+        "ID": "4057",
+        "VALUE": "cojedes(cojedes)-san carlos (los samanes)"
+      },
+      {
+        "ID": "4059",
+        "VALUE": "cojedes-(cojedes)- tinaco (monagas)"
+      },
+      {
+        "ID": "3849",
+        "VALUE": "CARABOBO - DIEGO IBARRA(AGUAS CALIENTES)"
+      },
+      {
+        "ID": "3851",
+        "VALUE": "CARABOBO - CARLOS ARVELO(GUIGUE)"
+      },
+      {
+        "ID": "3853",
+        "VALUE": "CARABOBO - CIUDAD ALIANZA (GUACARA)"
+      },
+      {
+        "ID": "3855",
+        "VALUE": "CARABOBO - DIEGO IBARRA(MARIARA)"
+      },
+      {
+        "ID": "3857",
+        "VALUE": "CARABOBO - GUACARA(GUACARA)"
+      },
+      {
+        "ID": "3859",
+        "VALUE": "CARABOBO - LOS GUAYOS (LOS GUAYOS)"
+      },
+      {
+        "ID": "3861",
+        "VALUE": "CARABOBO - RAFAEL URDANETA (VALENCIA)"
+      },
+      {
+        "ID": "3863",
+        "VALUE": "CARABOBO - SAN BLAS(VALENCIA)"
+      },
+      {
+        "ID": "3865",
+        "VALUE": "CARABOBO - SAN DIEGO (SAN DIEGO)"
+      },
+      {
+        "ID": "3867",
+        "VALUE": "CARABOBO - SAN JOAQUIN (SAN JOAQUIN)"
+      },
+      {
+        "ID": "3869",
+        "VALUE": "CARABOBO - SANTA ROSA(VALENCIA)"
+      },
+      {
+        "ID": "3871",
+        "VALUE": "CARABOBO - TACARIGUA(CARLOS ARVELO)"
+      },
+      {
+        "ID": "3873",
+        "VALUE": "CARABOBO - VIGIRIMA(GUACARA)"
+      },
+      {
+        "ID": "3875",
+        "VALUE": "CARABOBO - YAGUA(GUACARA)"
+      },
+      {
+        "ID": "3877",
+        "VALUE": "CARABOBO- PARAPARAL(LOS GUAYOS)"
+      },
+      {
+        "ID": "3913",
+        "VALUE": "Yaracuy(San Felipe) Independencia (independencia)"
+      },
+      {
+        "ID": "3915",
+        "VALUE": "San juan de los Morros ( Juan German Rocio) Guacara"
+      },
+      {
+        "ID": "3927",
+        "VALUE": "Zulia- (Francisco Ochoa) Sierra Maestra"
+      },
+      {
+        "ID": "3929",
+        "VALUE": "Zulia- (Baralt) El Venado"
+      },
+      {
+        "ID": "3935",
+        "VALUE": "Zulia- (Mara) San Rafael del Mojan"
+      },
+      {
+        "ID": "3937",
+        "VALUE": "CARACAS (MIRANDA) -CASCO HISTORICO (CUPIRA)"
+      },
+      {
+        "ID": "3941",
+        "VALUE": "CARACAS-DISTRITO CAPITAL ( LIBERTADOR)- CATEDRAL"
+      },
+      {
+        "ID": "3943",
+        "VALUE": "CARACA MIRANDA-LANDER (OCUMARE DEL TUY)"
+      },
+      {
+        "ID": "4113",
+        "VALUE": "Zulia ( Maracaibo) - Juana de Avila"
+      },
+      {
+        "ID": "4115",
+        "VALUE": "Zulia (Maracaibo) Francisco Ochoa"
+      },
+      {
+        "ID": "4117",
+        "VALUE": "Zulia (Maracaibo) Raul Leoni"
+      },
+      {
+        "ID": "4119",
+        "VALUE": "Zulia (Maracaibo) Cacique Mara"
+      },
+      {
+        "ID": "4121",
+        "VALUE": "Zulia (Maracaibo) Chiquinquira"
+      },
+      {
+        "ID": "4123",
+        "VALUE": "Zulia (Maracaibo) Olegario Villalobos"
+      },
+      {
+        "ID": "4125",
+        "VALUE": "Zulia (Rosario de Perija) El Rosario"
+      },
+      {
+        "ID": "4127",
+        "VALUE": "Zulia (Mara) La Sierrita"
+      },
+      {
+        "ID": "4129",
+        "VALUE": "Zulia (Maracaibo) Caracciolo Parra Perez"
+      },
+      {
+        "ID": "4131",
+        "VALUE": "Zulia (Maracaibo) Bolivar"
+      },
+      {
+        "ID": "4133",
+        "VALUE": "Zulia (Maracaibo) Antonio Borjas Romero"
+      },
+      {
+        "ID": "4135",
+        "VALUE": "Zulia (Mara) Ricaurte"
+      },
+      {
+        "ID": "4137",
+        "VALUE": "Zulia (San Francisco) Domitila Flores"
+      },
+      {
+        "ID": "4139",
+        "VALUE": "Zulia (Altamirante Padillla) Isla de Toas"
+      },
+      {
+        "ID": "4141",
+        "VALUE": "Zulia (Maracaibo) Francisco Eugenio Bustamante"
+      },
+      {
+        "ID": "4143",
+        "VALUE": "Zulia (San Francisco) San Francisco"
+      },
+      {
+        "ID": "4145",
+        "VALUE": "Zulia (San Francisco) Jose Domingo Rus"
+      },
+      {
+        "ID": "4147",
+        "VALUE": "Zulia (Maracaibo) Coquivacoa"
+      },
+      {
+        "ID": "4149",
+        "VALUE": "Zulia (Maracaibo) Idelfonso Vasquez"
+      },
+      {
+        "ID": "4151",
+        "VALUE": "Zulia (Maracaibo) Manuel Dagnino"
+      },
+      {
+        "ID": "4153",
+        "VALUE": "Zulia (Machiques) Bartolome de las Casas"
+      },
+      {
+        "ID": "4155",
+        "VALUE": "Zulia (Machiques) Libertad"
+      },
+      {
+        "ID": "4157",
+        "VALUE": "Zulia (MAchiques) San Jose de Perija"
+      },
+      {
+        "ID": "4159",
+        "VALUE": "Zulia (Miranda) Altagracia"
+      },
+      {
+        "ID": "4161",
+        "VALUE": "Zulia (Cabimas) German Rios Linares"
+      },
+      {
+        "ID": "4163",
+        "VALUE": "Zulia (Cabimas) La Rosa"
+      },
+      {
+        "ID": "4165",
+        "VALUE": "Zulia (Lagunillas) Alonso Ojeda"
+      },
+      {
+        "ID": "4167",
+        "VALUE": "Zulia (Baralt) Manuel Guanipa Matos"
+      },
+      {
+        "ID": "4169",
+        "VALUE": "Zulia (Cabimas) Carmen Herrera"
+      },
+      {
+        "ID": "4171",
+        "VALUE": "Zulia (Cabimas) Jorge Hernandez"
+      },
+      {
+        "ID": "4173",
+        "VALUE": "Zulia (Valmore Rodriguez) Raul Cuenca"
+      },
+      {
+        "ID": "4175",
+        "VALUE": "Zulia (Santa Rita) Santa Rita"
+      },
+      {
+        "ID": "4177",
+        "VALUE": "Zulia (Lagunillas) Libertad"
+      },
+      {
+        "ID": "4179",
+        "VALUE": "Zulia (Valmore Rodriguez) La Victoria"
+      },
+      {
+        "ID": "4181",
+        "VALUE": "Zulia (Mara) Tamare"
+      },
+      {
+        "ID": "4183",
+        "VALUE": "Zulia (Maracaibo) Luis Hurtado Higuera"
+      },
+      {
+        "ID": "4185",
+        "VALUE": "Zulia (San Francisco) El Bajo"
+      },
+      {
+        "ID": "4187",
+        "VALUE": "Zulia (Mara) San Rafael"
+      },
+      {
+        "ID": "4189",
+        "VALUE": "Zulia - Falcon (Mauroa) Mene Mauroa"
+      },
+      {
+        "ID": "4191",
+        "VALUE": "Zulia (Paez) Sinamaica"
+      },
+      {
+        "ID": "4193",
+        "VALUE": "Zulia (Miranda) Ana Maria Campos"
+      },
+      {
+        "ID": "4195",
+        "VALUE": "Zulia (Jesus Enrique Lossada) La Concepcion"
+      },
+      {
+        "ID": "4197",
+        "VALUE": "Zulia (Lagunillas) Campo Lara"
+      },
+      {
+        "ID": "4199",
+        "VALUE": "Zulia (San Francisco) Los Cortijos"
+      },
+      {
+        "ID": "4201",
+        "VALUE": "Zulia (San Francisco) Marcial Hernandez"
+      },
+      {
+        "ID": "4203",
+        "VALUE": "Zulia (Maracaibo) Cecilio Acosta"
+      },
+      {
+        "ID": "4205",
+        "VALUE": "Zulia (Cabimas) Ambrosio"
+      },
+      {
+        "ID": "4207",
+        "VALUE": "Zulia (Cañada de Urdaneta) Concepcion"
+      },
+      {
+        "ID": "4209",
+        "VALUE": "Zulia (Maracaibo) Santa Lucia"
+      },
+      {
+        "ID": "4211",
+        "VALUE": "Zulia (Maracaibo) Cristo de Aranza"
+      },
+      {
+        "ID": "4213",
+        "VALUE": "Carabobo - San Diego (Urbana San Diego)-valencia"
+      },
+      {
+        "ID": "4215",
+        "VALUE": "carabobo (valencia)- urbana san jose"
+      },
+      {
+        "ID": "4217",
+        "VALUE": "carabobo-(naguanagua) parroquia urbana-naguanagua"
+      },
+      {
+        "ID": "4219",
+        "VALUE": "carabobo-(bejuma)-no urbana canoabo"
+      },
+      {
+        "ID": "4221",
+        "VALUE": "carabobo-( naguanagua)- av universidad"
+      },
+      {
+        "ID": "4223",
+        "VALUE": "carabobo-(los guayos)-urbana los guayos-(guayos)"
+      },
+      {
+        "ID": "4225",
+        "VALUE": "Carabobo ( Valencia )-urbana Miguel Peña"
+      },
+      {
+        "ID": "4227",
+        "VALUE": "Carabobo ( Libertador )-urbana tocuyito-(tocuyito)"
+      },
+      {
+        "ID": "4229",
+        "VALUE": "carabobo-(bejuma)-urbana bejuma-(bejuma)"
+      },
+      {
+        "ID": "4231",
+        "VALUE": "Carabobo ( Valencia )- urbana Santa Rosa"
+      },
+      {
+        "ID": "4233",
+        "VALUE": "carabobo (valencia)- no urbana (negro primero-guigue)"
+      },
+      {
+        "ID": "4235",
+        "VALUE": "Carabobo( Puerto Cabello )-urbana fraternidad-(pto.cabello)"
+      },
+      {
+        "ID": "4237",
+        "VALUE": "carabobo-(diego ibarra)-urbana mariara-(mariara)"
+      },
+      {
+        "ID": "4239",
+        "VALUE": "carabobo -(carlos arvelo)- no urbana tacarigua-(guigue)"
+      },
+      {
+        "ID": "4241",
+        "VALUE": "carabobo-(diego ibarra)-urbana aguas calientes-(mariara)"
+      },
+      {
+        "ID": "4243",
+        "VALUE": "Carabobo-(guacara)-urbana guacara-(guacara)"
+      },
+      {
+        "ID": "4245",
+        "VALUE": "carabobo (puerto cabello)- urb.bartolome salom-(pto.cabello)"
+      },
+      {
+        "ID": "4247",
+        "VALUE": "carabobo-(carlos arvelo)- urbana guigue-(guigue)"
+      },
+      {
+        "ID": "4249",
+        "VALUE": "carabobo-(carlos arvelo)-no urbana-(belen-guigue)"
+      },
+      {
+        "ID": "4251",
+        "VALUE": "Carabobo ( los guayos )- urbana los Guayos-(valencia)"
+      },
+      {
+        "ID": "4253",
+        "VALUE": "Carabobo - (Carlos Arvelo) no urbana belen (tacarigua)"
+      },
+      {
+        "ID": "4255",
+        "VALUE": "Carabobo-(guaraca)-urbana guacara-(valencia)"
+      },
+      {
+        "ID": "4257",
+        "VALUE": "carabobo-(guacara)-no urbana yagua-(guacara)"
+      },
+      {
+        "ID": "4259",
+        "VALUE": "carabobo (valencia)- urbana catedral-(valencia)"
+      },
+      {
+        "ID": "4261",
+        "VALUE": "carabobo-(carlos arvelo)-no urbana tacarigua-(valencia)"
+      },
+      {
+        "ID": "4263",
+        "VALUE": "Carabobo( Valencia)-urbana el socorro-(valencia)"
+      },
+      {
+        "ID": "4265",
+        "VALUE": "Carabobo ( Miranda)-urbana Miranda-(miranda)"
+      },
+      {
+        "ID": "4267",
+        "VALUE": "Carabobo (juan Jose Mora ) Moron"
+      },
+      {
+        "ID": "4269",
+        "VALUE": "Carabobo ( Montalban)-urbana montalban-(montalban)"
+      },
+      {
+        "ID": "4271",
+        "VALUE": "carabobo (valencia)-urbana candelaria-(bejuma)"
+      },
+      {
+        "ID": "4273",
+        "VALUE": "Panamericana (Tachira) - Lobatera (Lobatera)"
+      },
+      {
+        "ID": "4457",
+        "VALUE": "barquisimeto ( yaracuy) - Cocorote ( Corcorote)"
+      },
+      {
+        "ID": "4459",
+        "VALUE": "barquisimeto ( yaracuy) - Independencia  ( independencia )"
+      },
+      {
+        "ID": "4461",
+        "VALUE": "barquisimeto ( yaracuy) - San felipe ( San felipe)"
+      },
+      {
+        "ID": "4463",
+        "VALUE": "barquisimeto ( yaracuy) - Manuel moje yumare  ( Manuel Monge )"
+      },
+      {
+        "ID": "4465",
+        "VALUE": "barquisimeto ( yaracuy) - Bolivar  ( Bolivar  )"
+      },
+      {
+        "ID": "4467",
+        "VALUE": "barquisimeto ( yaracuy) - Trinidad  ( Trinidad  )"
+      },
+      {
+        "ID": "4469",
+        "VALUE": "Lara  (barquisimeto)- Palavecino( Cabudare)"
+      },
+      {
+        "ID": "4471",
+        "VALUE": "Lara  (barquisimeto)- Torres( Carora)"
+      },
+      {
+        "ID": "4473",
+        "VALUE": "Lara  (barquisimeto)- Iribarren"
+      },
+      {
+        "ID": "4475",
+        "VALUE": "Lara  (barquisimeto)- Iribarren ( Bobare)"
+      },
+      {
+        "ID": "4477",
+        "VALUE": "Lara  (barquisimeto)- Iribarren ( Aguedo felipe Alvarado)"
+      },
+      {
+        "ID": "4479",
+        "VALUE": "Lara  (barquisimeto)- Iribarren ( Concepcion)"
+      },
+      {
+        "ID": "4481",
+        "VALUE": "Lara  (barquisimeto)- Iribarren ( Santa ines)"
+      },
+      {
+        "ID": "4483",
+        "VALUE": "Lara  (barquisimeto)- Andres eloy blanco  ( Sanare)"
+      },
+      {
+        "ID": "4485",
+        "VALUE": "Lara  (barquisimeto)- Simon planas ( Sarare)"
+      },
+      {
+        "ID": "4487",
+        "VALUE": "Lara  (barquisimeto)- iribarren( catedral )"
+      },
+      {
+        "ID": "4489",
+        "VALUE": "Lara  (barquisimeto)- iribarren( Santa rosa)"
+      },
+      {
+        "ID": "4491",
+        "VALUE": "Lara  (barquisimeto)"
+      },
+      {
+        "ID": "4493",
+        "VALUE": "Lara  (barquisimeto)- iribarren( cuji )"
+      },
+      {
+        "ID": "4495",
+        "VALUE": "Lara  (barquisimeto)- iribarren( Tamaca )"
+      },
+      {
+        "ID": "4497",
+        "VALUE": "Lara  (barquisimeto)- Crespo ( Freitez )"
+      },
+      {
+        "ID": "4499",
+        "VALUE": "Lara  (barquisimeto)- Jimenez(  tintorero)"
+      },
+      {
+        "ID": "4501",
+        "VALUE": "Lara  (barquisimeto)- Jimenez(  Juan bautista rodriguez )"
+      },
+      {
+        "ID": "4503",
+        "VALUE": "Lara  (barquisimeto)- Iribarren ( Ana Soto )"
+      },
+      {
+        "ID": "4505",
+        "VALUE": "Lara  (barquisimeto) Moran (Bolivar )"
+      },
+      {
+        "ID": "4507",
+        "VALUE": "Lara  (barquisimeto) Moran (Guarico )"
+      },
+      {
+        "ID": "4509",
+        "VALUE": "Lara  (barquisimeto) Moran ( Hilario luna y luna )"
+      },
+      {
+        "ID": "4511",
+        "VALUE": "Lara  (barquisimeto) Jimenez ( Juan bautista rodriguez )"
+      },
+      {
+        "ID": "4513",
+        "VALUE": "Lara  (barquisimeto) Iribarren  ( Concepcion )"
+      },
+      {
+        "ID": "4515",
+        "VALUE": "Lara  (barquisimeto) Iribarren  ( la concordia  )"
+      },
+      {
+        "ID": "4517",
+        "VALUE": "Lara  (barquisimeto) Andres eloy blanco  ( Pio Tamayo  )"
+      },
+      {
+        "ID": "4519",
+        "VALUE": "Lara  (barquisimeto)  iribarren ( buena vista)"
+      },
+      {
+        "ID": "4521",
+        "VALUE": "Lara  (barquisimeto)  iribarren ( Union)"
+      },
+      {
+        "ID": "4523",
+        "VALUE": "Lara  (barquisimeto)  Torres (Alta Gracia)"
+      },
+      {
+        "ID": "4525",
+        "VALUE": "Lara (barquisimeto) Iribarren (santa rosa)"
+      },
+      {
+        "ID": "4527",
+        "VALUE": "barquisimeto ( yaracuy)  Pena (Yaritagua)"
+      },
+      {
+        "ID": "4529",
+        "VALUE": "Yaracucy (Yaracuy) Jose Antonio Paez (Jose Antonio Paez)"
+      },
+      {
+        "ID": "4531",
+        "VALUE": "barquisimeto ( yaracuy)  Urachiche (Urachiche)"
+      },
+      {
+        "ID": "4533",
+        "VALUE": "barquisimeto ( yaracuy) Bruzual (Chivacoa)"
+      },
+      {
+        "ID": "4535",
+        "VALUE": "Yaracuy (Yaracuy) Aristides Bastidas (Aristides Bastidas)"
+      },
+      {
+        "ID": "4537",
+        "VALUE": "barquisimeto ( yaracuy)) Sucre (Sucre)"
+      },
+      {
+        "ID": "4539",
+        "VALUE": "Panamericana (Tachira) - Jose Antonio Paez (La Fria)"
+      },
+      {
+        "ID": "4541",
+        "VALUE": "Falcon-(yaracuy -Silva) -Tucacas. Tucacas"
+      },
+      {
+        "ID": "4543",
+        "VALUE": "Falcon-(yaracuy Monseñor Iturriza)-Chichiriviche. Chichiriviche"
+      },
+      {
+        "ID": "4545",
+        "VALUE": "Falcon-(yaracuy Pueblo Nuevo)- Tucacas"
+      },
+      {
+        "ID": "4547",
+        "VALUE": "Falcon-(yaracuy Cacique Manaure)- Cacique Manaure. Yaracal"
+      },
+      {
+        "ID": "4549",
+        "VALUE": "Yaracuy-( Nirgua Capital Nirgua )- Nirgua"
+      },
+      {
+        "ID": "4551",
+        "VALUE": "Falcon-(Acosta- Libertador)-Boca De Aroa"
+      },
+      {
+        "ID": "4553",
+        "VALUE": "Carabobo-(Puerto Cabello)-Urbana Democracia-Puerto Cabello"
+      },
+      {
+        "ID": "4555",
+        "VALUE": "Carabobo-(Juan José Mora)-Urbana Morón- Moron"
+      },
+      {
+        "ID": "4557",
+        "VALUE": "Carabobo-( Puerto Cabello)-Urbana Juan José Flores-Puerto Cabello"
+      },
+      {
+        "ID": "4561",
+        "VALUE": "Falcon  (Coro)  Miranda (San Antonio)"
+      },
+      {
+        "ID": "4563",
+        "VALUE": "Falcon  (Coro)  Miranda (San gabriel)"
+      },
+      {
+        "ID": "4565",
+        "VALUE": "Falcon  (Coro)  Miranda (Santa ana)"
+      },
+      {
+        "ID": "4567",
+        "VALUE": "Falcon  (Coro)  Zamora (Puerto Cumarebo)"
+      },
+      {
+        "ID": "4569",
+        "VALUE": "Falcon  (Coro)  Zamora (La soledad)"
+      },
+      {
+        "ID": "4571",
+        "VALUE": "Falcon  (Coro)  Colina (La vela de coro)"
+      },
+      {
+        "ID": "4573",
+        "VALUE": "Falcon  (Coro)  carirubana (carirubana)"
+      },
+      {
+        "ID": "4575",
+        "VALUE": "Falcon  (Coro)  carirubana (Parroquia norte)"
+      },
+      {
+        "ID": "4577",
+        "VALUE": "Falcon  (Coro)  carirubana (Santa ana)"
+      },
+      {
+        "ID": "4579",
+        "VALUE": "Falcon  (Coro)  Falcon (Adicora)"
+      },
+      {
+        "ID": "4581",
+        "VALUE": "Falcon  (Coro)  Falcon (Buena Vista)"
+      },
+      {
+        "ID": "4583",
+        "VALUE": "Falcon  (Coro)  los tanques (Los Taques)"
+      },
+      {
+        "ID": "4585",
+        "VALUE": "Falcon  (Coro)  los tanques (Judibana)"
+      },
+      {
+        "ID": "4587",
+        "VALUE": "Falcon  (Coro)  Dabajuro (Dabajuro)"
+      },
+      {
+        "ID": "4589",
+        "VALUE": "Falcon  (Coro)  Monseñor iturriza (Chichiriviche)"
+      },
+      {
+        "ID": "4591",
+        "VALUE": "Falcon  (Coro)  Jose Laurencio Silva (Tucacas)"
+      },
+      {
+        "ID": "4593",
+        "VALUE": "Falcon  (Coro)  Casique Manaure (Yaracal)"
+      },
+      {
+        "ID": "4595",
+        "VALUE": "Falcon  (Coro)  urumaco  (urumaco)"
+      },
+      {
+        "ID": "4597",
+        "VALUE": "Falcon  (Coro)  San Francisco (San Francisco)"
+      },
+      {
+        "ID": "4599",
+        "VALUE": "Falcon  (Coro)  Sabaneta (Sabaneta)"
+      },
+      {
+        "ID": "4601",
+        "VALUE": "Falcon  (Coro)  San Francisco (El bajo)"
+      },
+      {
+        "ID": "4603",
+        "VALUE": "Falcon  (Coro)  Miranda (San Antonio )"
+      },
+      {
+        "ID": "4605",
+        "VALUE": "Falcon  (Coro)  Guamacho (Guamacho)"
+      },
+      {
+        "ID": "4607",
+        "VALUE": "Falcon  (Coro)  Tocopero (Tocopero)"
+      },
+      {
+        "ID": "4661",
+        "VALUE": "caracas-(libertador)-san agustin-caracas"
+      },
+      {
+        "ID": "4663",
+        "VALUE": "caracas miranda-(independencia)-el cartanal-santa teresa"
+      },
+      {
+        "ID": "4665",
+        "VALUE": "caracas(miranda)-baruta-(las minas de baruta)"
+      },
+      {
+        "ID": "4667",
+        "VALUE": "guarico-(juan german roscio)-capital san juan de los morros"
+      },
+      {
+        "ID": "4669",
+        "VALUE": "caracas-(libertador)-el valle-(caracas)"
+      },
+      {
+        "ID": "4671",
+        "VALUE": "Caracas (La Guaira) - Vargas (Carayaca)-anare"
+      },
+      {
+        "ID": "4673",
+        "VALUE": "Caracas (Miranda - Cristobal Rojas (Charallave)"
+      },
+      {
+        "ID": "4675",
+        "VALUE": "caracas-(libertador)-san pedro-caracas"
+      },
+      {
+        "ID": "4677",
+        "VALUE": "caracas dtto.capital-(libertador)-san bernardino-caracas"
+      },
+      {
+        "ID": "4679",
+        "VALUE": "caracas-la guaira-(vargas)-catia la mar"
+      },
+      {
+        "ID": "4681",
+        "VALUE": "caracas-(miranda)-pedro gual-(cupira-cupira)"
+      },
+      {
+        "ID": "4683",
+        "VALUE": "caracas-miranda-(carrizal)-carrizal los teques"
+      },
+      {
+        "ID": "4685",
+        "VALUE": "caracas-(miranda)-urdaneta-(cua-cua)"
+      },
+      {
+        "ID": "4687",
+        "VALUE": "caracas-(distrito capital)-libertador- (el junquito)"
+      },
+      {
+        "ID": "4689",
+        "VALUE": "guarico-(jose tadeo monagas)-altagracia de orituco"
+      },
+      {
+        "ID": "4691",
+        "VALUE": "la guaira-vargas-(la guaira) caraballeda"
+      },
+      {
+        "ID": "4693",
+        "VALUE": "miranda-(guaicaipuro)-cecilio acosta-(san jose de los altos)"
+      },
+      {
+        "ID": "4695",
+        "VALUE": "caracas la guaira-(vargas)-la guaira- la guaira"
+      },
+      {
+        "ID": "4697",
+        "VALUE": "caracas-miranda-(plaza)-guarenas -guarenas"
+      },
+      {
+        "ID": "4699",
+        "VALUE": "caracas-(distrito capital)-libertador-(antimano)"
+      },
+      {
+        "ID": "4701",
+        "VALUE": "caracas-miranda-(zamora)-guatire-(guatire)"
+      },
+      {
+        "ID": "4703",
+        "VALUE": "miranda-(lander)-ocumare del tuy"
+      },
+      {
+        "ID": "4705",
+        "VALUE": "Caracas (Distrito Capital) - Libertador (Sucre)-caracas"
+      },
+      {
+        "ID": "4707",
+        "VALUE": "Miranda-(Acevedo-Aragüita)-Araira"
+      },
+      {
+        "ID": "4709",
+        "VALUE": "la guaira-(vargas)-maiquetia-(maiquetia.)"
+      },
+      {
+        "ID": "4711",
+        "VALUE": "falcon-(miranda)-san gabriel-(coro)"
+      },
+      {
+        "ID": "4713",
+        "VALUE": "falcon-(moron coro)-yaracal"
+      },
+      {
+        "ID": "4715",
+        "VALUE": "falcon-(carirubana)-punta cardon-punto fijo"
+      },
+      {
+        "ID": "4717",
+        "VALUE": "falcon-(acosta)-capadare-(adicora)"
+      },
+      {
+        "ID": "4719",
+        "VALUE": "falcon-(urumaco)-urumaco-(coro)"
+      },
+      {
+        "ID": "4721",
+        "VALUE": "falcon-(dabarujo)-dabarujo-(dabarujo)"
+      },
+      {
+        "ID": "4723",
+        "VALUE": "falcon-(miranda)-san antonio-(coro)"
+      },
+      {
+        "ID": "4725",
+        "VALUE": "falcon-(tocopero)-tocopero-(tocopero)"
+      },
+      {
+        "ID": "4727",
+        "VALUE": "falcon-(democracia)-pedregal-(pedregal)"
+      },
+      {
+        "ID": "4731",
+        "VALUE": "falcon-(cacique manaure)-cacique manaure-(santa ana)"
+      },
+      {
+        "ID": "4733",
+        "VALUE": "falcon-(san francisco)-san francisco-(mirimire)"
+      },
+      {
+        "ID": "4735",
+        "VALUE": "falcon-(miranda)-santa ana-(coro)"
+      },
+      {
+        "ID": "4737",
+        "VALUE": "Merida Plano (Merida) - Alberto Adriani (hector amable mora)"
+      },
+      {
+        "ID": "4739",
+        "VALUE": "Merida Plano (Zulia) - Sucre (bobures)"
+      },
+      {
+        "ID": "4741",
+        "VALUE": "Lara (Barquisimeto) Iribarren - Juan De Villegas"
+      },
+      {
+        "ID": "4743",
+        "VALUE": "FALCON - (FALCON) - PUEBLO NUEVO"
+      },
+      {
+        "ID": "4749",
+        "VALUE": "Panamericana (Tachira) - Ayacucho (Ribas Berti)"
+      },
+      {
+        "ID": "4751",
+        "VALUE": "Falcon-(acosta)-capadare-(adicora)"
+      },
+      {
+        "ID": "4753",
+        "VALUE": "Falcon-(federacion)-churuguara-churuguara"
+      },
+      {
+        "ID": "4755",
+        "VALUE": "Falcon-(falcon)-petit-(colina)"
+      },
+      {
+        "ID": "4757",
+        "VALUE": "Falcon-(colina)-la vela de coro (Coro)"
+      },
+      {
+        "ID": "4759",
+        "VALUE": "falcon-(zamora)-la cienaga-(cumarebo)"
+      },
+      {
+        "ID": "4761",
+        "VALUE": "Portuguesa alta (Cojedes) - Pao De San Juan Bautista (El Pao)"
+      },
+      {
+        "ID": "4763",
+        "VALUE": "Portuguesa alta (Cojedes) - Girardot (El Baul)"
+      },
+      {
+        "ID": "4765",
+        "VALUE": "ARAGUA (SAN CASIMIRO)(SAN CASIMIRO)"
+      }
+    ]
+  },
+  "UF_CRM_1638457710": {
+    "title": "UF_CRM_1638457710",
+    "formLabel": "Segmento PROFIT (Ruta)",
+    "items": [
+      {
+        "ID": "3501",
+        "VALUE": "sin definir"
+      },
+      {
+        "ID": "789",
+        "VALUE": "Plaza y S/c"
+      },
+      {
+        "ID": "787",
+        "VALUE": "llano"
+      },
+      {
+        "ID": "783",
+        "VALUE": "Frontera"
+      },
+      {
+        "ID": "785",
+        "VALUE": "Panamericana montaña"
+      },
+      {
+        "ID": "3123",
+        "VALUE": "Barinas Andes"
+      },
+      {
+        "ID": "1591",
+        "VALUE": "Coje/Valen OJO REVISAR"
+      },
+      {
+        "ID": "1181",
+        "VALUE": "Merida Plano - Capital"
+      },
+      {
+        "ID": "1563",
+        "VALUE": "Trujillo baja"
+      },
+      {
+        "ID": "3129",
+        "VALUE": "Zulia -Cda Ojeda"
+      },
+      {
+        "ID": "3131",
+        "VALUE": "Zulia - Machiques"
+      },
+      {
+        "ID": "3133",
+        "VALUE": "Apure Capital"
+      },
+      {
+        "ID": "3479",
+        "VALUE": "Zulia - Capital"
+      },
+      {
+        "ID": "931",
+        "VALUE": "Apure Ruta"
+      },
+      {
+        "ID": "885",
+        "VALUE": "Fuera de Tachira"
+      },
+      {
+        "ID": "1215",
+        "VALUE": "Eliminar Fuera Del Tachira"
+      },
+      {
+        "ID": "921",
+        "VALUE": "Compras (Casa de Representacion)"
+      },
+      {
+        "ID": "3135",
+        "VALUE": "(Compras) Laboratorio nacional"
+      },
+      {
+        "ID": "1625",
+        "VALUE": "Internacional"
+      },
+      {
+        "ID": "3911",
+        "VALUE": "Yaracuy"
+      },
+      {
+        "ID": "3939",
+        "VALUE": "S/C JAIME"
+      },
+      {
+        "ID": "3841",
+        "VALUE": "Trujillo Alta - capital"
+      },
+      {
+        "ID": "4067",
+        "VALUE": "(FORANEO) FRONTERA"
+      },
+      {
+        "ID": "4069",
+        "VALUE": "(FORANEO) LLANO"
+      },
+      {
+        "ID": "4071",
+        "VALUE": "Merida Plano - Sta Barbara"
+      },
+      {
+        "ID": "4073",
+        "VALUE": "Merida Plano - Arapuey"
+      },
+      {
+        "ID": "4065",
+        "VALUE": "(FORANEO) Panamericana"
+      },
+      {
+        "ID": "4075",
+        "VALUE": "Trujillo Alta - BRIAM"
+      },
+      {
+        "ID": "4077",
+        "VALUE": "Trujillo Alta - TRUJILLO"
+      },
+      {
+        "ID": "3127",
+        "VALUE": "Merida Montaña - capital"
+      },
+      {
+        "ID": "4079",
+        "VALUE": "Merida Montaña - BAJA (bailadores)"
+      },
+      {
+        "ID": "4081",
+        "VALUE": "Merida Montaña - ALTA (timotes)"
+      },
+      {
+        "ID": "791",
+        "VALUE": "Barinas Capital"
+      },
+      {
+        "ID": "4083",
+        "VALUE": "Barinas - Capital Baja"
+      },
+      {
+        "ID": "4085",
+        "VALUE": "Barinas - Capital Alta"
+      },
+      {
+        "ID": "4087",
+        "VALUE": "Barinas - Capital una vez a la semana"
+      },
+      {
+        "ID": "3125",
+        "VALUE": "Portugesa Baja - Capital"
+      },
+      {
+        "ID": "4089",
+        "VALUE": "Portugesa Baja - Ospino guanare"
+      },
+      {
+        "ID": "4091",
+        "VALUE": "Portugesa Baja - Biscucuy"
+      },
+      {
+        "ID": "1209",
+        "VALUE": "Portuguesa Alta - CAPITAL"
+      },
+      {
+        "ID": "4093",
+        "VALUE": "Portuguesa Alta - Tinaco"
+      },
+      {
+        "ID": "4095",
+        "VALUE": "Portuguesa Alta - OSCAR"
+      },
+      {
+        "ID": "4099",
+        "VALUE": "CARABOBO ALTA - JESUS BOLIVAR"
+      },
+      {
+        "ID": "4101",
+        "VALUE": "CARABOBO - ALTA JR"
+      },
+      {
+        "ID": "4659",
+        "VALUE": "CARABOBO - BAJA DANIEL"
+      },
+      {
+        "ID": "4729",
+        "VALUE": "CARABOBO - NIRGUA ELIAN"
+      },
+      {
+        "ID": "3615",
+        "VALUE": "Aragua - CAPITAL"
+      },
+      {
+        "ID": "4103",
+        "VALUE": "Aragua - Baja"
+      },
+      {
+        "ID": "4105",
+        "VALUE": "Aragua - MIRANDA"
+      },
+      {
+        "ID": "1389",
+        "VALUE": "Caracas - capital"
+      },
+      {
+        "ID": "4109",
+        "VALUE": "Caracas - Este"
+      },
+      {
+        "ID": "4111",
+        "VALUE": "Caracas - Alta"
+      },
+      {
+        "ID": "4363",
+        "VALUE": "Barquisimeto- Pedro"
+      },
+      {
+        "ID": "4745",
+        "VALUE": "Barquisimeto- Gregorio"
+      },
+      {
+        "ID": "4559",
+        "VALUE": "Falcon - Alta"
+      },
+      {
+        "ID": "4747",
+        "VALUE": "Falcon - Baja"
+      }
+    ]
+  },
+  "UF_CRM_1686015739936": {
+    "title": "UF_CRM_1686015739936",
+    "formLabel": "Dias De Entrega/Visita/Despacho",
+    "items": [
+      {
+        "ID": "3197",
+        "VALUE": "Diario"
+      },
+      {
+        "ID": "3199",
+        "VALUE": "Lunes"
+      },
+      {
+        "ID": "3201",
+        "VALUE": "Martes"
+      },
+      {
+        "ID": "3203",
+        "VALUE": "Miercoles"
+      },
+      {
+        "ID": "3205",
+        "VALUE": "Jueves"
+      },
+      {
+        "ID": "3207",
+        "VALUE": "Viernes"
+      },
+      {
+        "ID": "3209",
+        "VALUE": "Sabado"
+      },
+      {
+        "ID": "3211",
+        "VALUE": "Domingo"
+      },
+      {
+        "ID": "3213",
+        "VALUE": "Quincenal"
+      },
+      {
+        "ID": "3215",
+        "VALUE": "Por Agencia De Envio"
+      },
+      {
+        "ID": "3283",
+        "VALUE": "Retira En Oficina"
+      },
+      {
+        "ID": "3991",
+        "VALUE": "Semanal"
+      },
+      {
+        "ID": "4061",
+        "VALUE": "Por definir"
+      }
+    ]
+  },
+  "UF_CRM_1710873596810": {
+    "title": "UF_CRM_1710873596810",
+    "formLabel": "Lineas a comercializar",
+    "items": [
+      {
+        "ID": "3993",
+        "VALUE": "Alimentos"
+      },
+      {
+        "ID": "3995",
+        "VALUE": "Ampollas"
+      },
+      {
+        "ID": "3997",
+        "VALUE": "Jarabes"
+      },
+      {
+        "ID": "3999",
+        "VALUE": "Tableteria"
+      },
+      {
+        "ID": "4001",
+        "VALUE": "Medico Quirurgico"
+      },
+      {
+        "ID": "4003",
+        "VALUE": "miscelaneos y perfumeria"
+      },
+      {
+        "ID": "4005",
+        "VALUE": "productos naturales"
+      },
+      {
+        "ID": "4007",
+        "VALUE": "Equipos Medicos"
+      },
+      {
+        "ID": "4009",
+        "VALUE": "Instrumental quirurgico"
+      }
+    ]
+  }
+}
