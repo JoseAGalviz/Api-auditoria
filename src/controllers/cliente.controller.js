@@ -23,7 +23,6 @@ export const getBitrixCompanies = async (req, res) => {
     const fieldsToSelect = ["ID", "TITLE", ...targetFields];
     const { start } = req.query;
 
-    // Fetch companies and fields definitions
     const [companiesResponse, fieldsResponse] = await Promise.all([
       fetch(BITRIX_URL, {
         method: "POST",
@@ -46,7 +45,6 @@ export const getBitrixCompanies = async (req, res) => {
       throw new Error("Error al obtener datos de Bitrix24");
     }
 
-    // Field Mapping
     const fieldMaps = {};
     targetFields.forEach((fieldName) => {
       if (fieldsDefinitions.result[fieldName]?.items) {
@@ -84,7 +82,6 @@ export const getBitrixCompanies = async (req, res) => {
       return newCompany;
     });
 
-    // --- Integración Bases de Datos ---
     const uniqueCodesMap = new Map();
     mappedCompanies.forEach((c) => {
       const rawCode = c.UF_CRM_1634787828;
@@ -99,8 +96,9 @@ export const getBitrixCompanies = async (req, res) => {
     let profitDataMap = {};
     let gestionesMap = {};
     let auditoriaMap = {};
+    let matrixMap = {}; // Nueva variable para datos de la matriz
 
-    // 1. Profit Logic (Paginado)
+    // 1. Profit
     if (clientCodes.length > 0) {
       try {
         const pool = await sql.connect();
@@ -111,22 +109,22 @@ export const getBitrixCompanies = async (req, res) => {
         );
 
         const query = `
-                    DECLARE @Today DATETIME = GETDATE();
-                    DECLARE @FirstDayMonth DATETIME = DATEFROMPARTS(YEAR(@Today), MONTH(@Today), 1);
-                    DECLARE @FirstDayNextMonth DATETIME = DATEADD(MONTH, 1, @FirstDayMonth);
-                    DECLARE @FirstDayLastMonth DATETIME = DATEADD(MONTH, -1, @FirstDayMonth);
-                    
-                    SELECT co_cli, login, horar_caja FROM clientes WITH (NOLOCK) WHERE co_cli IN (${paramNames.map((p) => `@${p}`).join(",")});
-                    
-                    SELECT c.co_cli, ISNULL(f.total_trancito, 0) AS total_trancito, ISNULL(f.total_vencido, 0) AS total_vencido, f.fecha_ultima_compra, m.nro_doc, m.factura_mayor_morosidad, cob.cob_num, cob.ultimo_cobro, ISNULL(sku.sku_mes, 0) AS sku_mes, ISNULL(vm_actual.ventas_mes_actual, 0) AS ventas_mes_actual, ISNULL(vm_pasado.ventas_mes_pasado, 0) AS ventas_mes_pasado
-                    FROM (SELECT DISTINCT co_cli FROM clientes WHERE co_cli IN (${paramNames.map((p) => `@${p}`).join(",")})) c
-                    OUTER APPLY (SELECT ROUND(SUM(CASE WHEN fec_venc >= @Today AND saldo > 0 THEN saldo / NULLIF(tasa, 0) ELSE 0 END), 2) AS total_trancito, ROUND(SUM(CASE WHEN fec_venc < @Today AND saldo > 0 THEN saldo / NULLIF(tasa, 0) ELSE 0 END), 2) AS total_vencido, MAX(fec_emis) AS fecha_ultima_compra FROM factura WITH (NOLOCK) WHERE co_cli = c.co_cli AND anulada = 0) f
-                    OUTER APPLY (SELECT TOP 1 fact_num AS nro_doc, fec_emis AS factura_mayor_morosidad FROM factura WITH (NOLOCK) WHERE co_cli = c.co_cli AND saldo > 0 AND anulada = 0 ORDER BY fec_venc ASC) m
-                    OUTER APPLY (SELECT TOP 1 cob_num, fec_cob AS ultimo_cobro FROM cobros WITH (NOLOCK) WHERE co_cli = c.co_cli AND anulado = 0 ORDER BY fec_cob DESC) cob
-                    OUTER APPLY (SELECT COUNT(DISTINCT rf.co_art) AS sku_mes FROM factura f WITH (NOLOCK) INNER JOIN reng_fac rf WITH (NOLOCK) ON rf.fact_num = f.fact_num WHERE f.co_cli = c.co_cli AND f.anulada = 0 AND f.fec_emis >= @FirstDayMonth AND f.fec_emis < @FirstDayNextMonth) sku
-                    OUTER APPLY (SELECT ROUND(SUM(tot_neto / NULLIF(tasa, 0)), 2) AS ventas_mes_actual FROM factura WITH (NOLOCK) WHERE co_cli = c.co_cli AND anulada = 0 AND fec_emis >= @FirstDayMonth AND fec_emis < @FirstDayNextMonth) vm_actual
-                    OUTER APPLY (SELECT ROUND(SUM(tot_neto / NULLIF(tasa, 0)), 2) AS ventas_mes_pasado FROM factura WITH (NOLOCK) WHERE co_cli = c.co_cli AND anulada = 0 AND fec_emis >= @FirstDayLastMonth AND fec_emis < @FirstDayMonth) vm_pasado;
-                `;
+            DECLARE @Today DATETIME = GETDATE();
+            DECLARE @FirstDayMonth DATETIME = DATEFROMPARTS(YEAR(@Today), MONTH(@Today), 1);
+            DECLARE @FirstDayNextMonth DATETIME = DATEADD(MONTH, 1, @FirstDayMonth);
+            DECLARE @FirstDayLastMonth DATETIME = DATEADD(MONTH, -1, @FirstDayMonth);
+            
+            SELECT co_cli, login, horar_caja FROM clientes WITH (NOLOCK) WHERE co_cli IN (${paramNames.map((p) => `@${p}`).join(",")});
+            
+            SELECT c.co_cli, ISNULL(f.total_trancito, 0) AS total_trancito, ISNULL(f.total_vencido, 0) AS total_vencido, f.fecha_ultima_compra, m.nro_doc, m.factura_mayor_morosidad, cob.cob_num, cob.ultimo_cobro, ISNULL(sku.sku_mes, 0) AS sku_mes, ISNULL(vm_actual.ventas_mes_actual, 0) AS ventas_mes_actual, ISNULL(vm_pasado.ventas_mes_pasado, 0) AS ventas_mes_pasado
+            FROM (SELECT DISTINCT co_cli FROM clientes WHERE co_cli IN (${paramNames.map((p) => `@${p}`).join(",")})) c
+            OUTER APPLY (SELECT ROUND(SUM(CASE WHEN fec_venc >= @Today AND saldo > 0 THEN saldo / NULLIF(tasa, 0) ELSE 0 END), 2) AS total_trancito, ROUND(SUM(CASE WHEN fec_venc < @Today AND saldo > 0 THEN saldo / NULLIF(tasa, 0) ELSE 0 END), 2) AS total_vencido, MAX(fec_emis) AS fecha_ultima_compra FROM factura WITH (NOLOCK) WHERE co_cli = c.co_cli AND anulada = 0) f
+            OUTER APPLY (SELECT TOP 1 fact_num AS nro_doc, fec_emis AS factura_mayor_morosidad FROM factura WITH (NOLOCK) WHERE co_cli = c.co_cli AND saldo > 0 AND anulada = 0 ORDER BY fec_venc ASC) m
+            OUTER APPLY (SELECT TOP 1 cob_num, fec_cob AS ultimo_cobro FROM cobros WITH (NOLOCK) WHERE co_cli = c.co_cli AND anulado = 0 ORDER BY fec_cob DESC) cob
+            OUTER APPLY (SELECT COUNT(DISTINCT rf.co_art) AS sku_mes FROM factura f WITH (NOLOCK) INNER JOIN reng_fac rf WITH (NOLOCK) ON rf.fact_num = f.fact_num WHERE f.co_cli = c.co_cli AND f.anulada = 0 AND f.fec_emis >= @FirstDayMonth AND f.fec_emis < @FirstDayNextMonth) sku
+            OUTER APPLY (SELECT ROUND(SUM(tot_neto / NULLIF(tasa, 0)), 2) AS ventas_mes_actual FROM factura WITH (NOLOCK) WHERE co_cli = c.co_cli AND anulada = 0 AND fec_emis >= @FirstDayMonth AND fec_emis < @FirstDayNextMonth) vm_actual
+            OUTER APPLY (SELECT ROUND(SUM(tot_neto / NULLIF(tasa, 0)), 2) AS ventas_mes_pasado FROM factura WITH (NOLOCK) WHERE co_cli = c.co_cli AND anulada = 0 AND fec_emis >= @FirstDayLastMonth AND fec_emis < @FirstDayMonth) vm_pasado;
+        `;
 
         const result = await reqPool.query(query);
         result.recordsets[0].forEach((row) => {
@@ -161,65 +159,90 @@ export const getBitrixCompanies = async (req, res) => {
       }
     }
 
-    // 2. Auditoria
-    const auditoriaPool = getMysqlPool();
-    if (auditoriaPool && clientCodes.length > 0) {
-      try {
-        const placeholders = clientCodes.map(() => "?").join(",");
-        const query = `SELECT codigo_profit, bitacora, obs_ejecutiva, plan_semana FROM registros_auditoria WHERE codigo_profit IN (${placeholders})`;
-        const [rows] = await auditoriaPool.query(query, clientCodes);
-        rows.forEach((row) => {
-          if (row.codigo_profit) {
-            let parsedPlan = {};
-            try {
-              parsedPlan =
-                typeof row.plan_semana === "string"
-                  ? JSON.parse(row.plan_semana)
-                  : row.plan_semana || {};
-            } catch (e) { }
-            auditoriaMap[row.codigo_profit.trim()] = {
-              bitacora: row.bitacora,
-              obs_ejecutiva: row.obs_ejecutiva,
-              plan_semana: parsedPlan,
-            };
-          }
-        });
-      } catch (err) {
-        console.error("Error Auditoria DB:", err);
-      }
-    }
+    // 2. Auditoria (Old) & Matrix (New)
+    const appPool = getAppPool(); // Usamos AppPool para la tabla matrix
+    const auditoriaPool = getMysqlPool(); // Usamos MysqlPool para registros_auditoria vieja
 
-    // 3. Gestiones (App DB)
-    const appPool = getAppPool();
-    if (appPool && clientCodes.length > 0) {
-      try {
-        const placeholders = clientCodes.map(() => "?").join(",");
-        // --- INCLUIMOS COORDENADAS ---
-        const query = `
-                    SELECT co_cli, tipos, venta_tipoGestion, venta_descripcion, cobranza_tipoGestion, cobranza_descripcion, fecha_registro, ubicacion_lat, ubicacion_lng,
-                    CASE DAYOFWEEK(CONVERT_TZ(fecha_registro, '+00:00', '-04:00')) WHEN 1 THEN 'Domingo' WHEN 2 THEN 'Lunes' WHEN 3 THEN 'Martes' WHEN 4 THEN 'Miércoles' WHEN 5 THEN 'Jueves' WHEN 6 THEN 'Viernes' WHEN 7 THEN 'Sábado' END as dia_semana
-                    FROM gestiones WHERE co_cli IN (${placeholders}) AND YEARWEEK(CONVERT_TZ(fecha_registro, '+00:00', '-04:00'), 1) = YEARWEEK(CURDATE(), 1) ORDER BY fecha_registro DESC
-                `;
-        const [rows] = await appPool.query(query, clientCodes);
-        rows.forEach((row) => {
-          const key = row.co_cli.trim();
-          if (!gestionesMap[key]) gestionesMap[key] = [];
-          gestionesMap[key].push({
-            tipos: row.tipos,
-            venta_tipoGestion: row.venta_tipoGestion,
-            venta_descripcion: row.venta_descripcion,
-            cobranza_tipoGestion: row.cobranza_tipoGestion,
-            cobranza_descripcion: row.cobranza_descripcion,
-            fecha_registro: row.fecha_registro,
-            dia_semana: row.dia_semana,
-            ubicacion:
-              row.ubicacion_lat && row.ubicacion_lng
-                ? `${row.ubicacion_lat}, ${row.ubicacion_lng}`
-                : null,
+    if (clientCodes.length > 0) {
+      const placeholders = clientCodes.map(() => "?").join(",");
+
+      // A. Fetch Old Auditoria
+      if (auditoriaPool) {
+        try {
+          const query = `SELECT codigo_profit, bitacora, obs_ejecutiva, plan_semana FROM registros_auditoria WHERE codigo_profit IN (${placeholders})`;
+          const [rows] = await auditoriaPool.query(query, clientCodes);
+          rows.forEach((row) => {
+            if (row.codigo_profit) {
+              let parsedPlan = {};
+              try {
+                parsedPlan =
+                  typeof row.plan_semana === "string"
+                    ? JSON.parse(row.plan_semana)
+                    : row.plan_semana || {};
+              } catch (e) { }
+              auditoriaMap[row.codigo_profit.trim()] = {
+                bitacora: row.bitacora,
+                obs_ejecutiva: row.obs_ejecutiva,
+                plan_semana: parsedPlan,
+              };
+            }
           });
-        });
-      } catch (err) {
-        console.error("Error App DB:", err);
+        } catch (err) {
+          console.error("Error Auditoria DB:", err);
+        }
+      }
+
+      // B. Fetch Matrix (NUEVO)
+      if (appPool) {
+        try {
+          const query = `SELECT codigo_profit, auditoria_matriz FROM matrix WHERE codigo_profit IN (${placeholders})`;
+          const [rows] = await appPool.query(query, clientCodes);
+          rows.forEach((row) => {
+            if (row.codigo_profit) {
+              let parsed = null;
+              try {
+                parsed =
+                  typeof row.auditoria_matriz === "string"
+                    ? JSON.parse(row.auditoria_matriz)
+                    : row.auditoria_matriz;
+              } catch (e) { }
+              matrixMap[row.codigo_profit.trim()] = parsed;
+            }
+          });
+        } catch (err) {
+          console.error("Error Matrix DB:", err);
+        }
+      }
+
+      // C. Fetch Gestiones
+      if (appPool) {
+        try {
+          const query = `
+            SELECT co_cli, tipos, venta_tipoGestion, venta_descripcion, cobranza_tipoGestion, cobranza_descripcion, fecha_registro, ubicacion_lat, ubicacion_lng,
+            CASE DAYOFWEEK(CONVERT_TZ(fecha_registro, '+00:00', '-04:00')) WHEN 1 THEN 'Domingo' WHEN 2 THEN 'Lunes' WHEN 3 THEN 'Martes' WHEN 4 THEN 'Miércoles' WHEN 5 THEN 'Jueves' WHEN 6 THEN 'Viernes' WHEN 7 THEN 'Sábado' END as dia_semana
+            FROM gestiones WHERE co_cli IN (${placeholders}) AND YEARWEEK(CONVERT_TZ(fecha_registro, '+00:00', '-04:00'), 1) = YEARWEEK(CURDATE(), 1) ORDER BY fecha_registro DESC
+          `;
+          const [rows] = await appPool.query(query, clientCodes);
+          rows.forEach((row) => {
+            const key = row.co_cli.trim();
+            if (!gestionesMap[key]) gestionesMap[key] = [];
+            gestionesMap[key].push({
+              tipos: row.tipos,
+              venta_tipoGestion: row.venta_tipoGestion,
+              venta_descripcion: row.venta_descripcion,
+              cobranza_tipoGestion: row.cobranza_tipoGestion,
+              cobranza_descripcion: row.cobranza_descripcion,
+              fecha_registro: row.fecha_registro,
+              dia_semana: row.dia_semana,
+              ubicacion:
+                row.ubicacion_lat && row.ubicacion_lng
+                  ? `${row.ubicacion_lat}, ${row.ubicacion_lng}`
+                  : null,
+            });
+          });
+        } catch (err) {
+          console.error("Error App DB:", err);
+        }
       }
     }
 
@@ -232,9 +255,13 @@ export const getBitrixCompanies = async (req, res) => {
       const appData = cleanCode ? gestionesMap[cleanCode] : null;
       const auditoriaData =
         cleanCode && auditoriaMap[cleanCode] ? auditoriaMap[cleanCode] : {};
+      const matrixData =
+        cleanCode && matrixMap[cleanCode] ? matrixMap[cleanCode] : null; // Datos guardados
 
       let profitInfo = null;
-      if (profitData) profitInfo = { ...profitData };
+      if (profitData) {
+        profitInfo = { ...profitData };
+      }
 
       const gestionInfo = appData
         ? appData.map((g) => ({
@@ -246,6 +273,7 @@ export const getBitrixCompanies = async (req, res) => {
               .replace("T", " ")
               .substring(0, 19)
             : null,
+          ubicacion: g.ubicacion || null,
         }))
         : [];
 
@@ -256,6 +284,7 @@ export const getBitrixCompanies = async (req, res) => {
         bitacora: auditoriaData.bitacora || null,
         obs_ejecutiva: auditoriaData.obs_ejecutiva || null,
         semana: auditoriaData.plan_semana || {},
+        auditoria_guardada: matrixData, // ENVÍO AL FRONT
       };
     });
 
@@ -412,8 +441,9 @@ export const getAllBitrixCompanies = async (req, res) => {
     let profitDataMap = {};
     let gestionesMap = {};
     let auditoriaMap = {};
+    let matrixMap = {}; // Datos de la matriz guardada
 
-    // 5.1 Profit Batch (CORREGIDO)
+    // 5.1 Profit Batch
     const fetchProfit = async () => {
       const innerProfitMap = {};
       if (clientCodes.length === 0) return innerProfitMap;
@@ -518,7 +548,7 @@ export const getAllBitrixCompanies = async (req, res) => {
       return innerProfitMap;
     };
 
-    // 5.2 Gestiones Batch (ACTUALIZADO: Incluye coordenadas)
+    // 5.2 Gestiones Batch (CON COORDENADAS)
     const fetchGestiones = async () => {
       const appPool = getAppPool();
       const innerGestionesMap = {};
@@ -530,7 +560,6 @@ export const getAllBitrixCompanies = async (req, res) => {
           batches.push(clientCodes.slice(i, i + BATCH_SIZE));
         for (const batch of batches) {
           const placeholders = batch.map(() => "?").join(",");
-          // --- CONSULTA ACTUALIZADA CON COORDENADAS ---
           const query = `
                         SELECT co_cli, tipos, venta_tipoGestion, venta_descripcion, cobranza_tipoGestion, cobranza_descripcion, fecha_registro, ubicacion_lat, ubicacion_lng,
                         CASE DAYOFWEEK(CONVERT_TZ(fecha_registro, '+00:00', '-04:00')) WHEN 1 THEN 'Domingo' WHEN 2 THEN 'Lunes' WHEN 3 THEN 'Martes' WHEN 4 THEN 'Miércoles' WHEN 5 THEN 'Jueves' WHEN 6 THEN 'Viernes' WHEN 7 THEN 'Sábado' END as dia_semana
@@ -590,26 +619,64 @@ export const getAllBitrixCompanies = async (req, res) => {
       return innerAuditoriaMap;
     };
 
+    // 5.4. Matrix Batch (NUEVO: Recuperar datos guardados)
+    const fetchMatrixData = async () => {
+      const appPool = getAppPool();
+      const innerMatrixMap = {};
+      if (!appPool || clientCodes.length === 0) return innerMatrixMap;
+      try {
+        const BATCH_SIZE = 1000;
+        for (let i = 0; i < clientCodes.length; i += BATCH_SIZE) {
+          const batch = clientCodes.slice(i, i + BATCH_SIZE);
+          const placeholders = batch.map(() => "?").join(",");
+          const query = `SELECT codigo_profit, auditoria_matriz FROM matrix WHERE codigo_profit IN (${placeholders})`;
+          const [rows] = await appPool.query(query, batch);
+          rows.forEach((r) => {
+            if (r.codigo_profit) {
+              let parsed = null;
+              try {
+                parsed =
+                  typeof r.auditoria_matriz === "string"
+                    ? JSON.parse(r.auditoria_matriz)
+                    : r.auditoria_matriz;
+              } catch (e) {
+                console.error("Error parsing matrix json", e);
+              }
+              innerMatrixMap[r.codigo_profit.trim()] = parsed;
+            }
+          });
+        }
+      } catch (e) {
+        console.error("Error Matrix DB:", e);
+      }
+      return innerMatrixMap;
+    };
+
     if (clientCodes.length > 0) {
       console.log("⚡ Ejecutando consultas externas en paralelo...");
-      const [pData, gData, aData] = await Promise.all([
+      const [pData, gData, aData, mData] = await Promise.all([
         fetchProfit(),
         fetchGestiones(),
         fetchAuditoria(),
+        fetchMatrixData(), // <--- Agregado
       ]);
       profitDataMap = pData;
       gestionesMap = gData;
       auditoriaMap = aData;
+      matrixMap = mData; // <--- Agregado
     }
 
     // 7. Merge Final
     const finalData = mappedCompanies.map((c) => {
       const clientCode = c.UF_CRM_1634787828;
       const cleanCode = clientCode ? String(clientCode).trim() : null;
+
       const profitData = cleanCode ? profitDataMap[cleanCode] : null;
       const appData = cleanCode ? gestionesMap[cleanCode] : null;
       const auditoriaData =
         cleanCode && auditoriaMap[cleanCode] ? auditoriaMap[cleanCode] : {};
+      const matrixData =
+        cleanCode && matrixMap[cleanCode] ? matrixMap[cleanCode] : null; // <--- Agregado
 
       let profitInfo = null;
       if (profitData) profitInfo = { ...profitData };
@@ -624,7 +691,6 @@ export const getAllBitrixCompanies = async (req, res) => {
               .replace("T", " ")
               .substring(0, 19)
             : null,
-          // Aseguramos que la ubicacion se pase en el objeto
           ubicacion: g.ubicacion || null,
         }))
         : [];
@@ -636,6 +702,7 @@ export const getAllBitrixCompanies = async (req, res) => {
         bitacora: auditoriaData.bitacora || null,
         obs_ejecutiva: auditoriaData.obs_ejecutiva || null,
         semana: auditoriaData.plan_semana || {},
+        auditoria_guardada: matrixData, // <--- Enviamos datos al front
       };
     });
 
@@ -656,5 +723,82 @@ export const getAllBitrixCompanies = async (req, res) => {
   } catch (error) {
     console.error("Error en getAllBitrixCompanies:", error);
     res.status(500).json({ error: "Error interno", details: error.message });
+  }
+};
+
+/**
+ * Guardar o Actualizar datos de la matriz
+ * @route POST /api/matrix
+ */
+export const saveMatrixData = async (req, res) => {
+  try {
+    const pool = getAppPool();
+    if (!pool) {
+      throw new Error("No hay conexión a la base de datos de App");
+    }
+
+    const { id_bitrix, codigo_profit, gestion, full_data } = req.body;
+
+    if (!codigo_profit) {
+      return res
+        .status(400)
+        .json({ success: false, message: "Falta el código profit" });
+    }
+
+    const nombre_cliente = full_data?.nombre || null;
+    const bitacora = gestion?.bitacora || null;
+    const obs_ejecutiva = gestion?.obs_ejecutiva || null;
+
+    const semana = gestion?.semana ? JSON.stringify(gestion.semana) : null;
+    const auditoria_matriz = gestion?.auditoria_matriz
+      ? JSON.stringify(gestion.auditoria_matriz)
+      : null;
+
+    const query = `
+            INSERT INTO matrix (
+                id_bitrix, 
+                codigo_profit, 
+                nombre_cliente, 
+                bitacora, 
+                obs_ejecutiva, 
+                semana, 
+                auditoria_matriz
+            ) VALUES (?, ?, ?, ?, ?, ?, ?)
+            ON DUPLICATE KEY UPDATE
+                id_bitrix = VALUES(id_bitrix),
+                nombre_cliente = VALUES(nombre_cliente),
+                bitacora = VALUES(bitacora),
+                obs_ejecutiva = VALUES(obs_ejecutiva),
+                semana = VALUES(semana),
+                auditoria_matriz = VALUES(auditoria_matriz),
+                updated_at = NOW()
+        `;
+
+    const values = [
+      id_bitrix,
+      codigo_profit,
+      nombre_cliente,
+      bitacora,
+      obs_ejecutiva,
+      semana,
+      auditoria_matriz,
+    ];
+
+    const [result] = await pool.query(query, values);
+
+    res.status(200).json({
+      success: true,
+      message: "Datos guardados/actualizados correctamente",
+      data: {
+        id: result.insertId || result.info,
+        codigo_profit,
+      },
+    });
+  } catch (error) {
+    console.error("Error en saveMatrixData:", error);
+    res.status(500).json({
+      error: "Error al guardar los datos de la matriz",
+      details: error.message,
+    });
   }
 };
