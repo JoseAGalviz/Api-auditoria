@@ -1,0 +1,75 @@
+// Backup of planificacion.controller.js created automatically
+import { getMysqlPool } from "../config/database.js";
+
+/**
+ * Guardar planificación
+ * @route POST /api/planificacion
+ */
+export const savePlanificacion = async (req, res) => {
+    try {
+        const pool = getMysqlPool();
+        if (!pool) {
+            throw new Error("No hay conexión a la base de datos de Auditoria");
+        }
+
+        const { id_bitrix, codigo_profit, gestion, full_data } = req.body;
+
+        const nombre_cliente = full_data?.nombre || null;
+        const co_ven = full_data?.co_ven || null;
+        const bitacora = gestion?.bitacora || null;
+        const obs_ejecutiva = gestion?.obs_ejecutiva || null;
+        const semana = gestion?.semana ? JSON.stringify(gestion.semana) : null;
+        const fullDataJson = full_data ? JSON.stringify(full_data) : null;
+
+        const query = `
+            INSERT INTO planificacion (
+                id_bitrix,
+                codigo_profit,
+                nombre_cliente,
+                co_ven,
+                bitacora,
+                obs_ejecutiva,
+                semana,
+                full_data
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+            ON DUPLICATE KEY UPDATE
+                nombre_cliente = VALUES(nombre_cliente),
+                co_ven = VALUES(co_ven),
+                bitacora = VALUES(bitacora),
+                obs_ejecutiva = VALUES(obs_ejecutiva),
+                semana = VALUES(semana),
+                full_data = VALUES(full_data),
+                fecha_registro = CURRENT_TIMESTAMP
+        `;
+
+        const values = [
+            id_bitrix,
+            codigo_profit,
+            nombre_cliente,
+            co_ven,
+            bitacora,
+            obs_ejecutiva,
+            semana,
+            fullDataJson
+        ];
+
+        const [result] = await pool.query(query, values);
+
+        res.status(201).json({
+            success: true,
+            message: "Planificación guardada correctamente",
+            data: {
+                id: result.insertId,
+                id_bitrix,
+                codigo_profit
+            }
+        });
+
+    } catch (error) {
+        console.error("Error en savePlanificacion:", error);
+        res.status(500).json({
+            error: "Error al guardar la planificación",
+            details: error.message
+        });
+    }
+};

@@ -1,4 +1,4 @@
-import { getMysqlPool, sql } from "../config/database.js";
+import { getMysqlPool, getAppPool, sql } from "../config/database.js";
 import bcrypt from "bcrypt";
 import fetch from "node-fetch";
 import jwt from "jsonwebtoken";
@@ -423,12 +423,36 @@ export const eliminarUsuario = async (req, res) => {
 };
 
 /**
+ * Obtener vendedores desde la base de datos 'app'
+ * @route GET /api/usuarios/vendedores-app
+ */
+export const getVendedoresApp = async (req, res) => {
+    try {
+        const pool = getAppPool();
+        if (!pool) {
+            return res.status(500).json({ error: "No hay conexión a la base de datos 'app'." });
+        }
+
+        const [rows] = await pool.query(
+            "SELECT nombre, co_ven FROM usuarios WHERE rol = ?",
+            ['vendedor']
+        );
+
+        res.json({ success: true, count: rows.length, data: rows });
+
+    } catch (error) {
+        console.error("Error en getVendedoresApp:", error);
+        res.status(500).json({ error: "Error al obtener vendedores", details: error.message });
+    }
+};
+
+/**
  * Obtener lista de segmentos desde Bitrix24
  * @route GET /api/usuarios/segmentos
  */
 export const getSegmentos = async (req, res) => {
     try {
-        const BITRIX_URL = "https://b24-sjdauj.bitrix24.es/rest/5149/b4eirrr8ila4cpzk/crm.company.fields.json";
+        const BITRIX_URL = "https://cristmedical.bitrix24.es/rest/5149/b4eirrr8ila4cpzk/crm.company.fields.json";
         const FIELD_ID = "UF_CRM_1638457710";
 
         const response = await fetch(BITRIX_URL);

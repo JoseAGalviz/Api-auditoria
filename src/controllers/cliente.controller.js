@@ -309,11 +309,11 @@ export const getAllBitrixCompanies = async (req, res) => {
     const { segmentos } = req.body || {};
 
     const BITRIX_BATCH_URL =
-      "https://b24-sjdauj.bitrix24.es/rest/5149/qly93wxo8xvetemt/batch.json";
+      "https://cristmedical.bitrix24.es/rest/5149/qly93wxo8xvetemt/batch.json";
     const BITRIX_FIELDS_URL =
-      "https://b24-sjdauj.bitrix24.es/rest/5149/qly93wxo8xvetemt/crm.company.fields.json";
+      "https://cristmedical.bitrix24.es/rest/5149/b4eirrr8ila4cpzk/crm.company.fields.json";
     const BITRIX_LIST_URL =
-      "https://b24-sjdauj.bitrix24.es/rest/5149/qly93wxo8xvetemt/crm.company.list.json";
+      "https://cristmedical.bitrix24.es/rest/5149/qly93wxo8xvetemt/crm.company.list.json";
 
     const targetFields = [
       "UF_CRM_1634787828",
@@ -392,15 +392,23 @@ export const getAllBitrixCompanies = async (req, res) => {
           `crm.company.list?start=${cmdStart}&${selectParams}&${filterParams}`;
       }
       if (Object.keys(batchCommands).length === 0) return [];
+      
       const response = await fetch(BITRIX_BATCH_URL, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ halt: 0, cmd: batchCommands }),
       });
       const data = await response.json();
-      return data.result?.result
+
+      if (data.error) {
+           console.error(`❌ Error en Batch ${batchIndex}:`, data.error_description);
+      }
+      const batchResult = data.result?.result
         ? Object.values(data.result.result).flat()
         : [];
+        
+      console.log(`📥 Batch ${batchIndex}: Recibidos ${batchResult.length} registros.`);
+      return batchResult;
     };
 
     const batchPromises = [];
@@ -408,6 +416,8 @@ export const getAllBitrixCompanies = async (req, res) => {
 
     const results = await Promise.all(batchPromises);
     results.forEach((res) => (allCompanies = allCompanies.concat(res)));
+
+    console.log(`✅ Total compañías descargadas de Bitrix: ${allCompanies.length}`);
 
     const mappedCompanies = allCompanies.map((company) => {
       const newCompany = { ...company };
@@ -458,14 +468,13 @@ export const getAllBitrixCompanies = async (req, res) => {
           const localPool = await sql.connect();
           const reqPool = localPool.request();
           const values = batch.map((c) => `('${c}')`).join(",");
-          let segmentCondition = "";
+          
           let joinSegmento = "";
+          let selectSegmento = "";
+
           if (segmentos && Array.isArray(segmentos) && segmentos.length > 0) {
-            joinSegmento = "INNER JOIN segmento s WITH (NOLOCK) ON c.co_seg = s.co_seg";
-            const likeConditions = segmentos
-              .map((s) => `s.seg_des LIKE '%${String(s).trim().replace(/'/g, "''")}%'`)
-              .join(" OR ");
-            segmentCondition = `WHERE (${likeConditions})`;
+            joinSegmento = "LEFT JOIN segmento s WITH (NOLOCK) ON c.co_seg = s.co_seg";
+            selectSegmento = ", s.seg_des";
           }
           const query = `
                         SET NOCOUNT ON;
@@ -492,15 +501,14 @@ export const getAllBitrixCompanies = async (req, res) => {
 
                         SELECT co_cli, cob_num, fec_cob INTO #UltimoCobro FROM (SELECT c.co_cli, c.cob_num, c.fec_cob, ROW_NUMBER() OVER(PARTITION BY c.co_cli ORDER BY c.fec_cob DESC) as rn FROM cobros c WITH (NOLOCK) INNER JOIN #BatchClientes bc ON c.co_cli = bc.co_cli COLLATE DATABASE_DEFAULT WHERE c.anulado = 0) t WHERE rn = 1;
 
-                        SELECT c.co_cli, c.login, c.horar_caja, ISNULL(rf.total_trancito, 0) as total_trancito, ISNULL(rf.total_vencido, 0) as total_vencido, rf.fecha_ultima_compra, ISNULL(rf.ventas_mes_actual, 0) as ventas_mes_actual, ISNULL(rf.ventas_mes_pasado, 0) as ventas_mes_pasado, ISNULL(sku.sku_mes, 0) as sku_mes, m.nro_doc as morosidad_doc, cob.cob_num as ultimo_cobro_num, cob.fec_cob as ultimo_cobro_fecha
+                        SELECT c.co_cli, c.login, c.horar_caja${selectSegmento}, ISNULL(rf.total_trancito, 0) as total_trancito, ISNULL(rf.total_vencido, 0) as total_vencido, rf.fecha_ultima_compra, ISNULL(rf.ventas_mes_actual, 0) as ventas_mes_actual, ISNULL(rf.ventas_mes_pasado, 0) as ventas_mes_pasado, ISNULL(sku.sku_mes, 0) as sku_mes, m.nro_doc as morosidad_doc, cob.cob_num as ultimo_cobro_num, cob.fec_cob as ultimo_cobro_fecha
                         FROM clientes c WITH (NOLOCK) 
                         INNER JOIN #BatchClientes bc ON c.co_cli = bc.co_cli COLLATE DATABASE_DEFAULT 
                         ${joinSegmento}
                         LEFT JOIN #ResumenFacturas rf ON c.co_cli = rf.co_cli 
                         LEFT JOIN #ResumenSKU sku ON c.co_cli = sku.co_cli 
                         LEFT JOIN #Morosidad m ON c.co_cli = m.co_cli 
-                        LEFT JOIN #UltimoCobro cob ON c.co_cli = cob.co_cli 
-                        ${segmentCondition};
+                        LEFT JOIN #UltimoCobro cob ON c.co_cli = cob.co_cli;
 
                         DROP TABLE #BatchClientes; DROP TABLE #ResumenFacturas; DROP TABLE #ResumenSKU; DROP TABLE #Morosidad; DROP TABLE #UltimoCobro;
                     `;
@@ -519,6 +527,22 @@ export const getAllBitrixCompanies = async (req, res) => {
 
         allResults.forEach((res) => {
           res.recordset.forEach((row) => {
+            // Check segment if needed
+            if (segmentos && Array.isArray(segmentos) && segmentos.length > 0) {
+              const segDes = (row.seg_des || "").toLowerCase();
+              
+              // MEJORA: Dividimos términos compuestos como "Plaza y S/c" en ["plaza", "s/c"]
+              // Se divide por " y " (con espacios) o por comas ",".
+              const searchTerms = segmentos
+                .flatMap((s) => s.split(/\s+y\s+|,\s*/i)) 
+                .map((t) => t.trim().toLowerCase())
+                .filter((t) => t.length > 0);
+
+              const match = searchTerms.some((term) => segDes.includes(term));
+              
+              if (!match) return; // Skip if not matching
+            }
+
             const key = row.co_cli.trim();
             if (!innerProfitMap[key]) innerProfitMap[key] = {};
             const nroDoc = row.morosidad_doc
@@ -711,7 +735,11 @@ export const getAllBitrixCompanies = async (req, res) => {
 
     let responseData = finalData;
     if (segmentos?.length > 0) {
+      console.log(`🔍 Filtrando por segmentos: ${JSON.stringify(segmentos)}`);
       responseData = finalData.filter((i) => i.profit !== null);
+      console.log(`📉 Resultados tras filtro: ${responseData.length}`);
+    } else {
+       console.log(`ℹ️ Sin filtro de segmentos. Retornando ${responseData.length} registros.`);
     }
 
     res.json({

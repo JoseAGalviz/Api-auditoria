@@ -1,7 +1,7 @@
 import fetch from "node-fetch";
 import fs from "fs";
 
-const BITRIX_FIELDS_URL = "https://b24-sjdauj.bitrix24.es/rest/5149/qly93wxo8xvetemt/crm.company.fields.json";
+const BITRIX_FIELDS_URL = "https://cristmedical.bitrix24.es/rest/5149/b4eirrr8ila4cpzk/crm.company.fields.json";
 
 async function checkFields() {
     try {

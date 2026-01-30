@@ -7,6 +7,7 @@ import {
     actualizarUsuario,
     eliminarUsuario,
     getSegmentos,
+    getVendedoresApp,
     getSegmentosProfit
 } from "../controllers/usuario.controller.js";
 
@@ -26,6 +27,9 @@ router.get("/segmentos-profit", getSegmentosProfit);
 
 // Obtener todos los usuarios (con filtros opcionales)
 router.get("/", getUsuarios);
+
+// Obtener vendedores desde la DB 'app'
+router.get("/vendedores-app", getVendedoresApp);
 
 // Obtener usuario por ID
 router.get("/:id", getUsuarioById);
