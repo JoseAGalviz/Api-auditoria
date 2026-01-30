@@ -323,33 +323,19 @@ export const getAllBitrixCompanies = async (req, res) => {
       "UF_CRM_1686015739936",
     ];
 
-    const BITRIX_FILTER = { "!UF_CRM_1638457710": ["921", "3135"] };
+    // Construir filtro base de Bitrix
+    let BITRIX_FILTER = { "!UF_CRM_1638457710": ["921", "3135"] };
     const fieldsToSelect = ["ID", "TITLE", ...targetFields];
 
     console.log("🚀 Iniciando consulta OPTIMIZADA (BatchStrategy)...");
     const startTime = Date.now();
 
-    const [fieldsResponse, countResponse] = await Promise.all([
-      fetch(BITRIX_FIELDS_URL),
-      fetch(BITRIX_LIST_URL, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          select: ["ID"],
-          filter: BITRIX_FILTER,
-          start: 0,
-        }),
-      }),
-    ]);
-
+    // Primero obtenemos las definiciones de campos para mapear los segmentos
+    const fieldsResponse = await fetch(BITRIX_FIELDS_URL);
     const fieldsDefinitions = await fieldsResponse.json();
-    const countData = await countResponse.json();
 
-    if (!fieldsDefinitions.result || !countData.result)
+    if (!fieldsDefinitions.result)
       throw new Error("Error Bitrix Metadata");
-
-    const totalRecords = countData.total;
-    console.log(`📊 Total: ${totalRecords}`);
 
     const fieldMaps = {};
     targetFields.forEach((fieldName) => {
@@ -368,6 +354,53 @@ export const getAllBitrixCompanies = async (req, res) => {
       }
     });
 
+    // Si hay segmentos, construir filtro específico para UF_CRM_1638457710
+    if (segmentos && Array.isArray(segmentos) && segmentos.length > 0) {
+      console.log(`🔍 Filtrando por segmentos: ${JSON.stringify(segmentos)}`);
+
+      const segmentFieldMap = fieldMaps["UF_CRM_1638457710"];
+      if (segmentFieldMap) {
+        // Encontrar los IDs que corresponden a los segmentos solicitados
+        const segmentIds = [];
+        const normalizedSegments = segmentos.map(s => String(s).trim().toLowerCase());
+
+        for (const [id, value] of Object.entries(segmentFieldMap)) {
+          const normalizedValue = String(value).trim().toLowerCase();
+          if (normalizedSegments.includes(normalizedValue)) {
+            segmentIds.push(id);
+          }
+        }
+
+        if (segmentIds.length > 0) {
+          console.log(`📋 IDs de segmentos encontrados: ${segmentIds.join(", ")}`);
+          // Agregar filtro positivo para los segmentos solicitados
+          BITRIX_FILTER["UF_CRM_1638457710"] = segmentIds;
+          console.log("⚠️ No se encontraron IDs para los segmentos proporcionados");
+        }
+      } else {
+        console.log("⚠️ No se encontró el fieldMap para UF_CRM_1638457710");
+      }
+    }
+
+    // Ahora obtenemos el conteo con el filtro aplicado
+    const countResponse = await fetch(BITRIX_LIST_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        select: ["ID"],
+        filter: BITRIX_FILTER,
+        start: 0,
+      }),
+    });
+
+    const countData = await countResponse.json();
+
+    if (!countData.result)
+      throw new Error("Error Bitrix Count");
+
+    const totalRecords = countData.total;
+    console.log(`📊 Total registros a consultar: ${totalRecords}`);
+
     const RECORDS_PER_CMD = 50;
     const CMDS_PER_BATCH = 50;
     const RECORDS_PER_BATCH = RECORDS_PER_CMD * CMDS_PER_BATCH;
@@ -380,19 +413,28 @@ export const getAllBitrixCompanies = async (req, res) => {
       for (let i = 0; i < CMDS_PER_BATCH; i++) {
         const cmdStart = startOffset + i * RECORDS_PER_CMD;
         if (cmdStart >= totalRecords) break;
+
+        // Construir parámetros de select
         const selectParams = fieldsToSelect
           .map((f) => `select[]=${f}`)
           .join("&");
-        const filterKey = "!UF_CRM_1638457710";
-        const filterValues = ["921", "3135"];
-        const filterParams = filterValues
-          .map((val) => `filter[${filterKey}][]=${val}`)
-          .join("&");
+
+        // Construir parámetros de filtro dinámicamente
+        let filterParams = "";
+        for (const [key, value] of Object.entries(BITRIX_FILTER)) {
+          if (Array.isArray(value)) {
+            filterParams += value.map((val) => `filter[${key}][]=${val}`).join("&") + "&";
+          } else {
+            filterParams += `filter[${key}]=${value}&`;
+          }
+        }
+        filterParams = filterParams.slice(0, -1); // Remover último &
+
         batchCommands[`cmd_${i}`] =
           `crm.company.list?start=${cmdStart}&${selectParams}&${filterParams}`;
       }
       if (Object.keys(batchCommands).length === 0) return [];
-      
+
       const response = await fetch(BITRIX_BATCH_URL, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -401,12 +443,12 @@ export const getAllBitrixCompanies = async (req, res) => {
       const data = await response.json();
 
       if (data.error) {
-           console.error(`❌ Error en Batch ${batchIndex}:`, data.error_description);
+        console.error(`❌ Error en Batch ${batchIndex}:`, data.error_description);
       }
       const batchResult = data.result?.result
         ? Object.values(data.result.result).flat()
         : [];
-        
+
       console.log(`📥 Batch ${batchIndex}: Recibidos ${batchResult.length} registros.`);
       return batchResult;
     };
@@ -437,6 +479,7 @@ export const getAllBitrixCompanies = async (req, res) => {
       return newCompany;
     });
 
+    // Extraer códigos profit de las compañías (ya filtradas por Bitrix)
     const uniqueCodesMap = new Map();
     mappedCompanies.forEach((c) => {
       const raw = c.UF_CRM_1634787828;
@@ -447,6 +490,7 @@ export const getAllBitrixCompanies = async (req, res) => {
         );
     });
     const clientCodes = Array.from(uniqueCodesMap.values());
+    console.log(`📋 Códigos profit a buscar: ${clientCodes.length}`);
 
     let profitDataMap = {};
     let gestionesMap = {};
@@ -468,14 +512,7 @@ export const getAllBitrixCompanies = async (req, res) => {
           const localPool = await sql.connect();
           const reqPool = localPool.request();
           const values = batch.map((c) => `('${c}')`).join(",");
-          
-          let joinSegmento = "";
-          let selectSegmento = "";
 
-          if (segmentos && Array.isArray(segmentos) && segmentos.length > 0) {
-            joinSegmento = "LEFT JOIN segmento s WITH (NOLOCK) ON c.co_seg = s.co_seg";
-            selectSegmento = ", s.seg_des";
-          }
           const query = `
                         SET NOCOUNT ON;
                         DECLARE @Today DATETIME = GETDATE();
@@ -501,10 +538,9 @@ export const getAllBitrixCompanies = async (req, res) => {
 
                         SELECT co_cli, cob_num, fec_cob INTO #UltimoCobro FROM (SELECT c.co_cli, c.cob_num, c.fec_cob, ROW_NUMBER() OVER(PARTITION BY c.co_cli ORDER BY c.fec_cob DESC) as rn FROM cobros c WITH (NOLOCK) INNER JOIN #BatchClientes bc ON c.co_cli = bc.co_cli COLLATE DATABASE_DEFAULT WHERE c.anulado = 0) t WHERE rn = 1;
 
-                        SELECT c.co_cli, c.login, c.horar_caja${selectSegmento}, ISNULL(rf.total_trancito, 0) as total_trancito, ISNULL(rf.total_vencido, 0) as total_vencido, rf.fecha_ultima_compra, ISNULL(rf.ventas_mes_actual, 0) as ventas_mes_actual, ISNULL(rf.ventas_mes_pasado, 0) as ventas_mes_pasado, ISNULL(sku.sku_mes, 0) as sku_mes, m.nro_doc as morosidad_doc, cob.cob_num as ultimo_cobro_num, cob.fec_cob as ultimo_cobro_fecha
+                        SELECT c.co_cli, c.login, c.horar_caja, ISNULL(rf.total_trancito, 0) as total_trancito, ISNULL(rf.total_vencido, 0) as total_vencido, rf.fecha_ultima_compra, ISNULL(rf.ventas_mes_actual, 0) as ventas_mes_actual, ISNULL(rf.ventas_mes_pasado, 0) as ventas_mes_pasado, ISNULL(sku.sku_mes, 0) as sku_mes, m.nro_doc as morosidad_doc, cob.cob_num as ultimo_cobro_num, cob.fec_cob as ultimo_cobro_fecha
                         FROM clientes c WITH (NOLOCK) 
                         INNER JOIN #BatchClientes bc ON c.co_cli = bc.co_cli COLLATE DATABASE_DEFAULT 
-                        ${joinSegmento}
                         LEFT JOIN #ResumenFacturas rf ON c.co_cli = rf.co_cli 
                         LEFT JOIN #ResumenSKU sku ON c.co_cli = sku.co_cli 
                         LEFT JOIN #Morosidad m ON c.co_cli = m.co_cli 
@@ -527,22 +563,6 @@ export const getAllBitrixCompanies = async (req, res) => {
 
         allResults.forEach((res) => {
           res.recordset.forEach((row) => {
-            // Check segment if needed
-            if (segmentos && Array.isArray(segmentos) && segmentos.length > 0) {
-              const segDes = (row.seg_des || "").toLowerCase();
-              
-              // MEJORA: Dividimos términos compuestos como "Plaza y S/c" en ["plaza", "s/c"]
-              // Se divide por " y " (con espacios) o por comas ",".
-              const searchTerms = segmentos
-                .flatMap((s) => s.split(/\s+y\s+|,\s*/i)) 
-                .map((t) => t.trim().toLowerCase())
-                .filter((t) => t.length > 0);
-
-              const match = searchTerms.some((term) => segDes.includes(term));
-              
-              if (!match) return; // Skip if not matching
-            }
-
             const key = row.co_cli.trim();
             if (!innerProfitMap[key]) innerProfitMap[key] = {};
             const nroDoc = row.morosidad_doc
@@ -644,9 +664,13 @@ export const getAllBitrixCompanies = async (req, res) => {
     };
 
     // 5.4. Matrix Batch (NUEVO: Recuperar datos guardados)
+    // NOTA: Temporalmente deshabilitado - la tabla 'matrix' no existe
     const fetchMatrixData = async () => {
-      const appPool = getAppPool();
       const innerMatrixMap = {};
+      return innerMatrixMap;
+
+      /* CÓDIGO ORIGINAL - DESCOMENTAR CUANDO SE CREE LA TABLA 'matrix'
+      const appPool = getAppPool();
       if (!appPool || clientCodes.length === 0) return innerMatrixMap;
       try {
         const BATCH_SIZE = 1000;
@@ -673,6 +697,7 @@ export const getAllBitrixCompanies = async (req, res) => {
       } catch (e) {
         console.error("Error Matrix DB:", e);
       }
+      */
       return innerMatrixMap;
     };
 
@@ -732,21 +757,13 @@ export const getAllBitrixCompanies = async (req, res) => {
 
     const totalTime = (Date.now() - startTime) / 1000;
     console.log(`🏁 Proceso finalizado en ${totalTime} s`);
-
-    let responseData = finalData;
-    if (segmentos?.length > 0) {
-      console.log(`🔍 Filtrando por segmentos: ${JSON.stringify(segmentos)}`);
-      responseData = finalData.filter((i) => i.profit !== null);
-      console.log(`📉 Resultados tras filtro: ${responseData.length}`);
-    } else {
-       console.log(`ℹ️ Sin filtro de segmentos. Retornando ${responseData.length} registros.`);
-    }
+    console.log(`� Total resultados finales: ${finalData.length}`);
 
     res.json({
       success: true,
-      total: responseData.length,
+      total: finalData.length,
       time_seconds: totalTime,
-      data: responseData,
+      data: finalData,
     });
   } catch (error) {
     console.error("Error en getAllBitrixCompanies:", error);

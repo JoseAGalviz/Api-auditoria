@@ -11,7 +11,7 @@ import planificacionRoutes from "./routes/planificacion.route.js";
 import { saveMatrixData } from "./controllers/matrix.controller.js";
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8001;
 
 // Middleware
 app.use(cors());
