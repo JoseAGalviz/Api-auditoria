@@ -82,11 +82,11 @@ export const getMatrixData = async (req, res) => {
 
         const { codigo_profit } = req.query;
 
-        let query = "SELECT * FROM matrix";
+        let query = "SELECT * FROM matrix WHERE YEARWEEK(fecha_registro, 1) = YEARWEEK(CURDATE(), 1)";
         const values = [];
 
         if (codigo_profit) {
-            query += " WHERE codigo_profit = ?";
+            query += " AND codigo_profit = ?";
             values.push(codigo_profit);
         }
 
